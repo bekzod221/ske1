@@ -53,8 +53,10 @@ app.use((req, res, next) => {
 app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
 });
+const old = '192.168.100.90'
+const deploy = '0.0.0.0'
 
-app.listen(PORT, '192.168.100.90', () => {
+app.listen(PORT, deploy, () => {
     console.log(`Mock auth server running on http://192.168.100.90:${PORT}`);
     console.log(`Listening for POST requests to /api/auth (with any number of slashes)`);
 });
