@@ -42,6 +42,10 @@ app.post(/^\/api\/auth\/{0,}$/, (req, res) => {
     }, 100);
 });
 
+app.get('/ping', (req, res) => {
+    res.send("OK")
+})
+
 // Alternative: Use a middleware to normalize the path
 app.use((req, res, next) => {
     // Normalize multiple slashes to a single slash
