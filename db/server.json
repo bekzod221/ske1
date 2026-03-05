@@ -1,0 +1,20 @@
+[
+  {
+    "key": "bekzod",
+    "hwid": "TEST-123-123-ASD"
+  },
+  {
+    "key": "bek",
+    "hwid": "TEST-223-123-ASD"
+  },
+  {
+    "key": "testkey",
+    "hwid": "",
+    "expiresAt": "07.03.2026 20:03:30"
+  },
+  {
+    "key": "asd",
+    "hwid": "HWIDREPLACED",
+    "expiresAt": "07.03.2026 20:04:41"
+  }
+]
