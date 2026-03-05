@@ -84,7 +84,7 @@ app.get('/ping', (req, res) => {
     res.send("OK")
 })
 
-app.get("/", async (req, res)=> {
+app.get("/showall", async (req, res)=> {
     const data = await fs.readFile('db/server.json', 'utf-8')
     const jsonData = JSON.parse(data)
     res.json(jsonData)
