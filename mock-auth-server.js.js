@@ -150,8 +150,10 @@ app.post("/create", async (req, res) => {
         const expiryDate = new Date(Date.now() + durationMs);
         const formattedDate = formatDate(expiryDate);
         
-        // Create new item
+        // Create new item with unique id
+        const id = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         const newItem = {
+            id: id,
             key: key,
             hwid: "",
             expiresAt: formattedDate
@@ -162,7 +164,73 @@ app.post("/create", async (req, res) => {
         
         return res.status(201).json({
             status: "success",
+            id: id,
             key: key,
+            expiresAt: formattedDate
+        });
+    } catch (error) {
+        return res.status(400).json({status: "error", message: error.message});
+    }
+});
+
+app.post("/delete", async (req, res) => {
+    try {
+        const {id} = req.body;
+        
+        if (!id) {
+            return res.status(400).json({status: "error", message: "id is required"});
+        }
+        
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+        
+        // Find the item with matching id
+        const itemIndex = db.findIndex(item => item.id === id);
+        
+        if (itemIndex === -1) {
+            return res.status(404).json({status: "error", message: "Key not found"});
+        }
+        
+        // Remove the item
+        db.splice(itemIndex, 1);
+        await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+        
+        return res.status(200).json({status: "success", message: "Key deleted"});
+    } catch (error) {
+        return res.status(400).json({status: "error", message: error.message});
+    }
+});
+
+app.post("/update", async (req, res) => {
+    try {
+        const {id, duration} = req.body;
+        
+        if (!id || !duration) {
+            return res.status(400).json({status: "error", message: "id and duration are required"});
+        }
+        
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+        
+        // Find the item with matching id
+        const matchedItem = db.find(item => item.id === id);
+        
+        if (!matchedItem) {
+            return res.status(404).json({status: "error", message: "Key not found"});
+        }
+        
+        // Parse duration and calculate new expiry date from current time
+        const durationMs = parseDuration(duration);
+        const expiryDate = new Date(Date.now() + durationMs);
+        const formattedDate = formatDate(expiryDate);
+        
+        // Update the item
+        matchedItem.expiresAt = formattedDate;
+        await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+        
+        return res.status(200).json({
+            status: "success",
+            id: id,
             expiresAt: formattedDate
         });
     } catch (error) {
