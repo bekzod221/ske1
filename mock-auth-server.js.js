@@ -84,7 +84,7 @@ app.get('/ping', (req, res) => {
     res.send("OK")
 })
 
-app.post('/verifyformlbbcrack', () => {
+app.post('/verifyformlbbcrack', (req, res) => {
     // Log incoming data for debugging
     console.log('Received validation request:');
     console.log('Body:', req.body); // requires urlencoded parser
