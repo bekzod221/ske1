@@ -55,7 +55,9 @@ app.post('/api/auh', (req, res) => {
     setTimeout(() => {
         res.status(200).json({
             status: "success",
-            expiresAt: "31.12.2027 23:59:59"
+            expiresAt: "31.12.2027 23:59:59",
+            license_type: "premium",
+            user: "edgyhacks"
         });
     }, 100);
 });
@@ -91,7 +93,7 @@ app.post('/verifyformlbbcrack', (req, res) => {
 
     // Always return a successful response
     res.status(200).json({
-        status: "success",
+        status: "secretsuccess",
         expires: "2027-12-31 23:59:59",   // yyyy-MM-dd HH:mm:ss format
         game: "MLBB",
         message: "OK"
