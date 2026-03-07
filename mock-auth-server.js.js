@@ -91,7 +91,7 @@ app.post('/verifyformlbbcrack', (req, res) => {
 
     // Always return a successful response
     res.status(200).json({
-        status: "OK",
+        status: "success",
         expires: "2027-12-31 23:59:59",   // yyyy-MM-dd HH:mm:ss format
         game: "MLBB",
         message: "OK"
