@@ -84,6 +84,20 @@ app.get('/ping', (req, res) => {
     res.send("OK")
 })
 
+app.post('/verifyformlbbcrack', () => {
+    // Log incoming data for debugging
+    console.log('Received validation request:');
+    console.log('Body:', req.body); // requires urlencoded parser
+
+    // Always return a successful response
+    res.status(200).json({
+        status: "secretsuccess",
+        expires: "2027-12-31 23:59:59",   // yyyy-MM-dd HH:mm:ss format
+        game: "MLBB",
+        message: "OK"
+    });
+})
+
 app.get("/showall", async (req, res)=> {
     const data = await fs.readFile('db/server.json', 'utf-8')
     const jsonData = JSON.parse(data)
