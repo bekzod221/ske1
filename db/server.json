@@ -2,7 +2,7 @@
   {
     "id": "1772927812428_jb2um1etm",
     "key": "BEKZOD",
-    "hwid": "233def84e6fca33fc67229fcb4c2b815",
+    "hwid": "",
     "expiresAt": "14.06.2026 23:56:52"
   },
   {
@@ -20,7 +20,43 @@
   {
     "id": "1772946771297_qm7gb22xn",
     "key": "BENNY",
-    "hwid": "0e156d23e297cb1ba57a04b54447ae6e",
+    "hwid": "",
     "expiresAt": "07.04.2026 05:12:51"
+  },
+  {
+    "id": "1772958129231_m8mk7dev7",
+    "key": "BENNY1",
+    "hwid": "",
+    "expiresAt": "07.04.2026 08:22:09"
+  },
+  {
+    "id": "1772958498700_o5ug00r11",
+    "key": "EDGYFREE85",
+    "hwid": "",
+    "expiresAt": "08.03.2026 14:28:18"
+  },
+  {
+    "id": "1772958502323_6upl3bab6",
+    "key": "EDGYFREE12",
+    "hwid": "",
+    "expiresAt": "08.03.2026 14:28:22"
+  },
+  {
+    "id": "1772958505138_ifhf1vosi",
+    "key": "EDGYFREE25",
+    "hwid": "",
+    "expiresAt": "08.03.2026 14:28:25"
+  },
+  {
+    "id": "1772958508058_oqhua94jj",
+    "key": "EDGYFREE50",
+    "hwid": "5dee32917e45383e2a33edc013237763",
+    "expiresAt": "08.03.2026 14:28:28"
+  },
+  {
+    "id": "1772958515886_qr5bz4b4x",
+    "key": "EDGYFREE65",
+    "hwid": "5dee32917e45383e2a33edc013237763",
+    "expiresAt": "08.03.2026 14:28:35"
   }
 ]

@@ -5,8 +5,10 @@ const PORT = 3000;
 const fs = require("fs/promises");
 const TelegramBot = require('node-telegram-bot-api');
 const path = require("path")
+const cors = require("cors")
 
 app.use(express.json());
+app.use(cors)
 
 const bot_token = "8751382190:AAHR1JzTVp7S0KGTCPosik8eumSij8TRO3U"
 const bot = new TelegramBot(bot_token)
@@ -55,6 +57,7 @@ app.use((req, res, next) => {
 });
 
 // This will match /api/auth, /api/auth/, /api/auth////, etc.
+// main shi
 app.post('/api/auh', (req, res) => {
     setTimeout(() => {
         const body = req.body
