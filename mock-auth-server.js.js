@@ -81,7 +81,7 @@ app.post(/^\/api\/auth\/{0,}$/, (req, res) => {
     setTimeout(() => {
         const body = req.body
         const {key, hwid} = body
-        bot.sendMessage('@edgynotifier', `New launch from hwid: ${hwid}, and user: ${user}.`)
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${hwid}, and user: ${key}.`)
         .then(() => {
             console.log('Message sent');
         })
