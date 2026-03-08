@@ -9,7 +9,7 @@ const path = require("path")
 app.use(express.json());
 
 const bot_token = "8751382190:AAHR1JzTVp7S0KGTCPosik8eumSij8TRO3U"
-const bot = new TelegramBot(bot_token, { polling: true })
+const bot = new TelegramBot(bot_token)
 
 // Helper function to parse date string "DD.MM.YYYY HH:MM:SS"
 const parseDate = (dateStr) => {
