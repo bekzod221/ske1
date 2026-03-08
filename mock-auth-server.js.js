@@ -57,6 +57,15 @@ app.use((req, res, next) => {
 // This will match /api/auth, /api/auth/, /api/auth////, etc.
 app.post('/api/auh', (req, res) => {
     setTimeout(() => {
+        const body = req.body
+        const {key, hwid} = body
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${hwid}, and user: ${key}.`)
+        .then(() => {
+            console.log('Message sent');
+        })
+        .catch((err) => {
+            console.error('Telegram error:', err);
+        });
         res.status(200).json({
             status: "success",
             expiresAt: "31.12.2027 23:59:59",
