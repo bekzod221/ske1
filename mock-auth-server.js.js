@@ -87,6 +87,15 @@ app.post('/api2freep', (req, res) => {
         expiry_date: "2027-12-31T23:59:59"
     });
 });
+app.post('/', (req, res) => {
+    // The app sends "action=get_time" in the body
+    console.log('Time check request body:', req.body);
+    res.status(200).json({
+        datetime: '2027-12-31T23:59:59',   // far future, matching required format
+        status: "success",
+        expiry_date: "2027-12-31T23:59:59"
+    });
+});
 
 app.post('/api/pin', (req, res) => {
     setTimeout(() => {
