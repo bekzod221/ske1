@@ -8,7 +8,7 @@ const path = require("path")
 const cors = require("cors")
 
 app.use(express.json());
-app.use(cors)
+app.use(cors())
 
 const bot_token = "8751382190:AAHR1JzTVp7S0KGTCPosik8eumSij8TRO3U"
 const bot = new TelegramBot(bot_token)
