@@ -2,10 +2,14 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const fs = require("fs/promises")
+const fs = require("fs/promises");
+const TelegramBot = require('node-telegram-bot-api');
 const path = require("path")
 
 app.use(express.json());
+
+const bot_token = "8751382190:AAHR1JzTVp7S0KGTCPosik8eumSij8TRO3U"
+const bot = new TelegramBot(bot_token, { polling: true })
 
 // Helper function to parse date string "DD.MM.YYYY HH:MM:SS"
 const parseDate = (dateStr) => {
@@ -75,6 +79,16 @@ app.post('/api/pin', (req, res) => {
 // Also match with regex pattern to catch any variations
 app.post(/^\/api\/auth\/{0,}$/, (req, res) => {
     setTimeout(() => {
+        const body = req.body
+        const {hwid, user} = body
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${hwid}, and user: ${user}.`)
+        .then(() => {
+            console.log('Message sent');
+        })
+        .catch((err) => {
+            console.error('Telegram error:', err);
+        });
+        
         res.status(200).json({
             status: "success",
             expiresAt: "31.12.2027 23:59:59"

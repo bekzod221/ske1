@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "1772927812428_jb2um1etm",
+    "key": "BEKZOD",
+    "hwid": "233def84e6fca33fc67229fcb4c2b815",
+    "expiresAt": "14.06.2026 23:56:52"
+  },
+  {
+    "id": "1772946598609_zkmcdm88o",
+    "key": "CHRIS",
+    "hwid": "50e08919b62e399cdcffbfd912f5a974",
+    "expiresAt": "07.04.2026 05:09:58"
+  },
+  {
+    "id": "1772946722389_34wzj49h1",
+    "key": "JAICY30D",
+    "hwid": "",
+    "expiresAt": "07.04.2026 05:12:02"
+  },
+  {
+    "id": "1772946771297_qm7gb22xn",
+    "key": "BENNY",
+    "hwid": "0e156d23e297cb1ba57a04b54447ae6e",
+    "expiresAt": "07.04.2026 05:12:51"
+  }
+]
