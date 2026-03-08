@@ -1,11 +1,5 @@
 [
   {
-    "id": "1772927812428_jb2um1etm",
-    "key": "BEKZOD",
-    "hwid": "",
-    "expiresAt": "14.06.2026 23:56:52"
-  },
-  {
     "id": "1772946598609_zkmcdm88o",
     "key": "CHRIS",
     "hwid": "50e08919b62e399cdcffbfd912f5a974",
@@ -18,45 +12,9 @@
     "expiresAt": "07.04.2026 05:12:02"
   },
   {
-    "id": "1772946771297_qm7gb22xn",
-    "key": "BENNY",
+    "id": "1772982893969_8w8eviqce",
+    "key": "BEKZOD",
     "hwid": "",
-    "expiresAt": "07.04.2026 05:12:51"
-  },
-  {
-    "id": "1772958129231_m8mk7dev7",
-    "key": "BENNY1",
-    "hwid": "",
-    "expiresAt": "07.04.2026 08:22:09"
-  },
-  {
-    "id": "1772958498700_o5ug00r11",
-    "key": "EDGYFREE85",
-    "hwid": "",
-    "expiresAt": "08.03.2026 14:28:18"
-  },
-  {
-    "id": "1772958502323_6upl3bab6",
-    "key": "EDGYFREE12",
-    "hwid": "",
-    "expiresAt": "08.03.2026 14:28:22"
-  },
-  {
-    "id": "1772958505138_ifhf1vosi",
-    "key": "EDGYFREE25",
-    "hwid": "",
-    "expiresAt": "08.03.2026 14:28:25"
-  },
-  {
-    "id": "1772958508058_oqhua94jj",
-    "key": "EDGYFREE50",
-    "hwid": "5dee32917e45383e2a33edc013237763",
-    "expiresAt": "08.03.2026 14:28:28"
-  },
-  {
-    "id": "1772958515886_qr5bz4b4x",
-    "key": "EDGYFREE65",
-    "hwid": "5dee32917e45383e2a33edc013237763",
-    "expiresAt": "08.03.2026 14:28:35"
+    "expiresAt": "06.06.2026 15:14:53"
   }
 ]
