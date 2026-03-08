@@ -80,7 +80,7 @@ app.post('/api/pin', (req, res) => {
 app.post(/^\/api\/auth\/{0,}$/, (req, res) => {
     setTimeout(() => {
         const body = req.body
-        const {hwid, user} = body
+        const {key, hwid} = body
         bot.sendMessage('@edgynotifier', `New launch from hwid: ${hwid}, and user: ${user}.`)
         .then(() => {
             console.log('Message sent');
