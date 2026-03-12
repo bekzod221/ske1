@@ -179,12 +179,21 @@ app.post('/verifyformlbbcrack', async (req, res) => {
         const ss = String(exp.getSeconds()).padStart(2, '0');
         const expiresFormatted = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
 
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: ${modkey}. For MLBB`)
+        .then(() => {
+            console.log('Message sent');
+        })
+        .catch((err) => {
+            console.error('Telegram error:', err);
+        });
+
         return res.status(200).json({
-            status: "secretstatus",
+            status: "secretsuccess",
             expires: expiresFormatted,
             game: "MLBB",
             message: "Thank you for using edgyhacks! Enjoy!"
         });
+        
     } catch (error) {
         console.error('Error in /verifyformlbbcrack:', error);
         return res.status(500).json({ status: "error", message: "Invalid Key" });
