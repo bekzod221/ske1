@@ -132,18 +132,63 @@ app.get('/ping', (req, res) => {
     res.send("OK")
 })
 
-app.post('/verifyformlbbcrack', (req, res) => {
-    // Log incoming data for debugging
-    console.log('Received validation request:');
-    console.log('Body:', req.body); // requires urlencoded parser
+app.post('/verifyformlbbcrack', async (req, res) => {
+    try {
+        const { modkey, visitorid, deviceDateTime } = req.body;
 
-    // Always return a successful response
-    res.status(200).json({
-        status: "secretsuccess",
-        expires: "2027-12-31 23:59:59",   // yyyy-MM-dd HH:mm:ss format
-        game: "MLBB",
-        message: "OK"
-    });
+        console.log('Received MLBB validation request:');
+        console.log('modkey:', modkey);
+        console.log('visitorid:', visitorid);
+        console.log('deviceDateTime:', deviceDateTime);
+
+        if (!modkey || !visitorid) {
+            return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
+        }
+
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+
+        // Reuse the same logic as /verify but map:
+        // modkey -> key, visitorid -> hwid
+        const matchedItem = db.find(item => item.key == modkey);
+
+        if (!matchedItem) {
+            return res.status(404).json({ status: "error" });
+        }
+
+        const expiryDate = parseDate(matchedItem.expiresAt);
+        if (new Date() > expiryDate) {
+            return res.status(401).json({ status: "error", message: "Key expired" });
+        }
+
+        if (matchedItem.hwid === "" || matchedItem.hwid === null || matchedItem.hwid === undefined) {
+            matchedItem.hwid = visitorid;
+            await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+        } else if (matchedItem.hwid !== visitorid) {
+            return res.status(404).json({ status: "error" });
+        }
+
+        // Successful verification - respond similarly to the previous hardcoded route,
+        // but use the real expiry from the database.
+        const exp = parseDate(matchedItem.expiresAt);
+        const yyyy = exp.getFullYear();
+        const mm = String(exp.getMonth() + 1).padStart(2, '0');
+        const dd = String(exp.getDate()).padStart(2, '0');
+        const hh = String(exp.getHours()).padStart(2, '0');
+        const mi = String(exp.getMinutes()).padStart(2, '0');
+        const ss = String(exp.getSeconds()).padStart(2, '0');
+        const expiresFormatted = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
+
+        return res.status(200).json({
+            status: "secretsuccess",
+            expires: expiresFormatted,
+            game: "MLBB",
+            message: "Thank you for using edgyhacks! Enjoy!"
+        });
+    } catch (error) {
+        console.error('Error in /verifyformlbbcrack:', error);
+        return res.status(500).json({ status: "error", message: "Invalid Key" });
+    }
 })
 
 app.get("/showall", async (req, res)=> {
