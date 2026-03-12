@@ -187,9 +187,10 @@ app.post('/verifyformlbbcrack', async (req, res) => {
         const expiresFormatted = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
 
         return res.status(200).json({
-            status: "yes",
+            status: "secretstatus",
             expires: expiresFormatted,
             game: "MLBB",
+            vip: "yes",
             message: "Thank you for using edgyhacks! Enjoy!"
         });
     } catch (error) {
