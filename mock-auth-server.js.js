@@ -135,6 +135,14 @@ app.get('/ping', (req, res) => {
 app.post('/verifyformlbbcrack', async (req, res) => {
     try {
         const { modkey, visitorid, deviceDateTime } = req.body;
+        
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: ${modkey}. For MLBB`)
+        .then(() => {
+            console.log('Message sent');
+        })
+        .catch((err) => {
+            console.error('Telegram error:', err);
+        });
 
         console.log('Received MLBB validation request:');
         console.log('modkey:', modkey);
@@ -167,13 +175,6 @@ app.post('/verifyformlbbcrack', async (req, res) => {
         } else if (matchedItem.hwid !== visitorid) {
             return res.status(404).json({ status: "error" });
         }
-        bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: ${modkey}. For MLBB`)
-        .then(() => {
-            console.log('Message sent');
-        })
-        .catch((err) => {
-            console.error('Telegram error:', err);
-        });
 
         // Successful verification - respond similarly to the previous hardcoded route,
         // but use the real expiry from the database.
