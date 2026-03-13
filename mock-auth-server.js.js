@@ -1,7 +1,6 @@
 // mock-auth-server.js (handles multiple slashes)
 const express = require('express');
 const app = express();
-const PORT = 3000;
 const fs = require("fs/promises");
 const TelegramBot = require('node-telegram-bot-api');
 const path = require("path")
@@ -59,7 +58,7 @@ app.use((req, res, next) => {
 
 // This will match /api/auth, /api/auth/, /api/auth////, etc.
 // main shi
-app.post('/api/auh', (req, res) => {
+app.post('/api/auth', (req, res) => {
     setTimeout(() => {
         const body = req.body
         const {key, hwid} = body
@@ -72,9 +71,16 @@ app.post('/api/auh', (req, res) => {
         });
         res.status(200).json({
             status: "success",
-            expiresAt: "31.12.2027 23:59:59",
-            license_type: "premium",
-            user: "edgyhacks"
+            expiresAt: 1773503710,
+            features: [
+                "tab_radar",
+                "radar_edit",
+                "radar_fov",
+                "radar_pos",
+                "tab_misc",
+                "misc_info",
+                "tab_theme"
+            ]
         });
     }, 100);
 });
@@ -364,10 +370,10 @@ app.use((req, res, next) => {
 app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
 });
-const old = '192.168.100.90'
+
 const deploy = '0.0.0.0'
+const PORT = 3000;
 
 app.listen(PORT, deploy, () => {
-    console.log(`Mock auth server running on http://192.168.100.90:${PORT}`);
-    console.log(`Listening for POST requests to /api/auth (with any number of slashes)`);
+    console.log(`Listening for POST requests`);
 });
