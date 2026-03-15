@@ -171,7 +171,7 @@ app.post('/verifyformlbbcrack', async (req, res) => {
             matchedItem.hwid = visitorid;
             await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
         } else if (matchedItem.hwid !== visitorid) {
-            return res.status(404).json({ status: "error" });
+            return res.status(200).json({ status: "error", message: "THIS KEY IS USED BY ANOTHER DEVICE! Please get a new key" });
         }
 
         // Successful verification - respond similarly to the previous hardcoded route,
