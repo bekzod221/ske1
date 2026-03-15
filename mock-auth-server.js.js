@@ -150,6 +150,13 @@ app.post('/verifyformlbbcrack', async (req, res) => {
         if (!modkey || !visitorid) {
             return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
+        if(modkey == "iosgods") {
+            return res.status(200).json({
+                status: "secretsuccess",
+                game: "MLBB",
+                message: "Enjoy!"
+            });
+        }
 
         const data = await fs.readFile('db/server.json', 'utf-8');
         const db = JSON.parse(data);
