@@ -151,6 +151,13 @@ app.post('/verifyformlbbcrack', async (req, res) => {
             return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
         if(modkey == "iosgods") {
+             bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IOSGODS.`)
+            .then(() => {
+                console.log('Message sent');
+            })
+            .catch((err) => {
+                console.error('Telegram error:', err);
+            });
             return res.status(200).json({
                 status: "secretsuccess",
                 game: "MLBB",
