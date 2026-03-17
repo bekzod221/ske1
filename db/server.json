@@ -92,7 +92,7 @@
   {
     "id": "1773537316663_fvsh4j1o7",
     "key": "AZAD",
-    "hwid": "",
+    "hwid": "3C00FC38-9EE6-42A9-9A70-2DE1D16EABB3",
     "expiresAt": "08.04.2026 01:15:16"
   },
   {
@@ -100,5 +100,41 @@
     "key": "trial4h",
     "hwid": "5D944806-9F35-44EF-AE3D-227B0A541CB2",
     "expiresAt": "15.03.2026 05:33:48"
+  },
+  {
+    "id": "1773583344830_g3ncn7gbz",
+    "key": "justin",
+    "hwid": "1DE59ACB-8E94-494E-81A3-CA8EF63CBA88",
+    "expiresAt": "17.03.2026 14:02:24"
+  },
+  {
+    "id": "1773591581460_fq517eq9x",
+    "key": "cc6h1",
+    "hwid": "35D3C887-9CC2-4DDA-AC83-73C3DB6E6838",
+    "expiresAt": "16.03.2026 22:41:30"
+  },
+  {
+    "id": "1773593792796_qcitta8fd",
+    "key": "ryutrial",
+    "hwid": "AC34176D-7EE4-4771-BE6B-D7DD6B2EF4E8",
+    "expiresAt": "15.03.2026 18:56:32"
+  },
+  {
+    "id": "1773593835991_7uyre9vat",
+    "key": "fanstrial",
+    "hwid": "BEFAD2EE-1F36-43D4-8720-DB8CC06812C2",
+    "expiresAt": "15.03.2026 20:57:15"
+  },
+  {
+    "id": "1773596406373_bx907s9mu",
+    "key": "testexp",
+    "hwid": "3C00FC38-9EE6-42A9-9A70-2DE1D16EABB3",
+    "expiresAt": "15.03.2026 17:41:06"
+  },
+  {
+    "id": "1773610907063_zr1jtvuu1",
+    "key": "2htrial",
+    "hwid": "7FDA01C3-9808-42C9-AEE4-CC84125ECED8",
+    "expiresAt": "15.03.2026 23:41:47"
   }
 ]

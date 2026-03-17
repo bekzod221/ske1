@@ -373,6 +373,19 @@ app.post("/update", async (req, res) => {
         return res.status(400).json({status: "error", message: error.message});
     }
 });
+
+app.get("/games", async (req, res) => {
+  try {
+    const dbGames = await fs.readFile("db/games.json", "utf-8");
+    const db = JSON.parse(dbGames);
+
+    res.status(200).json(db); // cleaner response
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Failed to load games" });
+  }
+});
+
 // Alternative: Use a middleware to normalize the path
 app.use((req, res, next) => {
     // Normalize multiple slashes to a single slash
