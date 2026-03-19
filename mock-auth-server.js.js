@@ -208,10 +208,10 @@ app.post('/verifyformlbbcrack', async (req, res) => {
         });
 
         return res.status(200).json({
-            status: "secretsuccess",
+            status: "error",
             expires: expiresFormatted,
             game: "MLBB",
-            message: "Thank you for using edgyhacks! Enjoy!"
+            message: "please wait for an update"
         });
         
     } catch (error) {
