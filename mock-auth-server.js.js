@@ -138,7 +138,7 @@ app.get('/ping', (req, res) => {
     res.send("OK")
 })
 
-app.post('/verifyformlbbcrack', async (req, res) => {
+app.post('/verifyformlbbcracknewvipone', async (req, res) => {
     try {
         const { modkey, visitorid, deviceDateTime } = req.body;
 
