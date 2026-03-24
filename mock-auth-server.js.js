@@ -220,6 +220,73 @@ app.post('/verifyformlbbcrack', async (req, res) => {
     }
 })
 
+app.post('/auth/verify', async (req, res) => {
+    try {
+        const { modkey, visitorid, deviceDateTime } = req.body;
+
+        console.log('Received MLBB validation request:');
+        console.log('modkey:', modkey);
+        console.log('visitorid:', visitorid);
+        console.log('deviceDateTime:', deviceDateTime);
+
+        if (!modkey || !visitorid) {
+            return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
+        }
+
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+
+        // Reuse the same logic as /verify but map:
+        // modkey -> key, visitorid -> hwid
+        const matchedItem = db.find(item => item.key == modkey);
+
+        if (!matchedItem) {
+            return res.status(404).json({ status: "error" });
+        }
+
+        const expiryDate = parseDate(matchedItem.expiresAt);
+        if (new Date() > expiryDate) {
+            return res.status(401).json({ status: "error", message: "Key expired" });
+        }
+
+        if (matchedItem.hwid === "" || matchedItem.hwid === null || matchedItem.hwid === undefined) {
+            matchedItem.hwid = visitorid;
+            await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+        } else if (matchedItem.hwid !== visitorid) {
+            return res.status(200).json({ status: "error", message: "THIS KEY IS USED BY ANOTHER DEVICE! Please get a new key" });
+        }
+
+        // Successful verification - respond similarly to the previous hardcoded route,
+        // but use the real expiry from the database.
+        const exp = parseDate(matchedItem.expiresAt);
+        const yyyy = exp.getFullYear();
+        const mm = String(exp.getMonth() + 1).padStart(2, '0');
+        const dd = String(exp.getDate()).padStart(2, '0');
+        const hh = String(exp.getHours()).padStart(2, '0');
+        const mi = String(exp.getMinutes()).padStart(2, '0');
+        const ss = String(exp.getSeconds()).padStart(2, '0');
+        const expiresFormatted = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
+
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: ${modkey}. For MLBB`)
+        .then(() => {
+            console.log('Message sent');
+        })
+        .catch((err) => {
+            console.error('Telegram error:', err);
+        });
+
+        return res.status(200).json({
+            status: "success",
+            expires: expiresFormatted,
+            game: "MLBB",
+            message: "Thanks for using edgyhacks!"
+        });
+        
+    } catch (error) {
+        console.error('Error in /auth/verify:', error);
+        return res.status(500).json({ status: "error", message: "Invalid Key" });
+    }
+})
 app.get("/showall", async (req, res)=> {
     const data = await fs.readFile('db/server.json', 'utf-8')
     const jsonData = JSON.parse(data)
@@ -257,7 +324,6 @@ app.post("/verify", async (req, res) => {
         // hwid is not empty, compare with req.body hwid
         if (matchedItem.hwid === hwid) {
             // Both match
-            return res.status(200).json({status: "success"});
         } else {
             // hwid doesn't match
             return res.status(404).json({status: "error"});
