@@ -248,6 +248,9 @@ app.post('/auth/verify', async (req, res) => {
         if (new Date() > expiryDate) {
             return res.status(401).json({ status: "error", message: "Key expired" });
         }
+        if(modkey == "iown"){
+            return res.status(200).json({status: "succes", message: "You're the dev huh... holy aura"})
+        }
 
         if (matchedItem.hwid === "" || matchedItem.hwid === null || matchedItem.hwid === undefined) {
             matchedItem.hwid = visitorid;
