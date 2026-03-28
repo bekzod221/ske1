@@ -220,7 +220,7 @@ app.post('/verifyformlbbcracknewvipone', async (req, res) => {
     }
 })
 
-app.post('mlbb', async (req, res) => {
+app.post('/mlbb', async (req, res) => {
     try {
         const { modkey, visitorid, deviceDateTime, version } = req.body;
 
