@@ -220,17 +220,21 @@ app.post('/verifyformlbbcracknewvipone', async (req, res) => {
     }
 })
 
-app.post('/auth/verify', async (req, res) => {
+app.post('final', async (req, res) => {
     try {
-        const { modkey, visitorid, deviceDateTime } = req.body;
+        const { modkey, visitorid, deviceDateTime, version } = req.body;
 
         console.log('Received MLBB validation request:');
         console.log('modkey:', modkey);
         console.log('visitorid:', visitorid);
         console.log('deviceDateTime:', deviceDateTime);
 
+        if(!version){
+            return res.status(400).json({ status: "error", message: "Your key is not suitable for this version!" })
+        }
+
         if (!modkey || !visitorid) {
-            return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
+            return res.status(400).json({ status: "error", message: "modkey is required" });
         }
 
         const data = await fs.readFile('db/server.json', 'utf-8');
@@ -239,6 +243,12 @@ app.post('/auth/verify', async (req, res) => {
         // Reuse the same logic as /verify but map:
         // modkey -> key, visitorid -> hwid
         const matchedItem = db.find(item => item.key == modkey);
+        if (!matchedItem.version || matchedItem.version !== version) {
+            return res.status(400).json({
+                    status: "error",
+                    message: "Your key is not suitable for this version!"
+            });
+        }
 
         if (!matchedItem) {
             return res.status(404).json({ status: "error" });
@@ -248,8 +258,8 @@ app.post('/auth/verify', async (req, res) => {
         if (new Date() > expiryDate) {
             return res.status(401).json({ status: "error", message: "Key expired" });
         }
-        if(modkey == "iown"){
-            return res.status(200).json({status: "succes", message: "You're the dev huh... holy aura"})
+        if(modkey == "beggyowns"){
+            return res.status(200).json({status: "success", message: "You're the dev huh... holy aura"})
         }
 
         if (matchedItem.hwid === "" || matchedItem.hwid === null || matchedItem.hwid === undefined) {
