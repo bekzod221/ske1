@@ -306,7 +306,7 @@ app.get("/showall", async (req, res)=> {
     res.json(jsonData)
 })
 
-app.post("/verify", async (req, res) => { 
+app.post("/mlbb", async (req, res) => { 
     const body = req.body;
     const data = await fs.readFile('db/server.json', 'utf-8')
     const db = JSON.parse(data)
