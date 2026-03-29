@@ -398,6 +398,7 @@ app.post("/create", async (req, res) => {
             id: id,
             key: key,
             hwid: "",
+            version: "1.0", // 🔥 ADDED
             expiresAt: formattedDate
         };
         
@@ -479,7 +480,82 @@ app.post("/update", async (req, res) => {
         return res.status(400).json({status: "error", message: error.message});
     }
 });
+app.post("/reset-hwid", async (req, res) => {
+    try {
+        const { key } = req.body;
 
+        if (!key) {
+            return res.status(400).json({ status: "error", message: "key is required" });
+        }
+
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+
+        const matchedItem = db.find(item => item.key == key);
+
+        if (!matchedItem) {
+            return res.status(404).json({ status: "error", message: "Key not found" });
+        }
+
+        matchedItem.hwid = "";
+
+        await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+
+        bot.sendMessage('@edgynotifier', `HWID RESET for key: ${key}`)
+        .catch(()=>{});
+
+        return res.status(200).json({
+            status: "success",
+            message: "HWID reset successful"
+        });
+
+    } catch (error) {
+        return res.status(500).json({ status: "error", message: error.message });
+    }
+});
+app.post("/change-version", async (req, res) => {
+    try {
+        const { key, version } = req.body;
+
+        if (!key || !version) {
+            return res.status(400).json({ 
+                status: "error", 
+                message: "key and version are required" 
+            });
+        }
+
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+
+        const matchedItem = db.find(item => item.key == key);
+
+        if (!matchedItem) {
+            return res.status(404).json({ 
+                status: "error", 
+                message: "Key not found" 
+            });
+        }
+
+        matchedItem.version = version;
+
+        await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+
+        bot.sendMessage('@edgynotifier', `VERSION CHANGED for key: ${key} → ${version}`)
+        .catch(()=>{});
+
+        return res.status(200).json({
+            status: "success",
+            message: "Version updated",
+            version: version
+        });
+
+    } catch (error) {
+        return res.status(500).json({ 
+            status: "error", 
+            message: error.message 
+        });
+    }
+});
 app.get("/games", async (req, res) => {
   try {
     const dbGames = await fs.readFile("db/games.json", "utf-8");
