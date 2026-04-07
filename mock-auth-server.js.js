@@ -219,6 +219,7 @@ app.post('/verifyformlbbcracknewvipone', async (req, res) => {
         return res.status(500).json({ status: "error", message: "Invalid Key" });
     }
 })
+
 app.post('/mlbb', async (req, res) => {
     try {
         const { modkey, visitorid, deviceDateTime, version } = req.body;
@@ -235,7 +236,13 @@ app.post('/mlbb', async (req, res) => {
                 message: "modkey and visitorid are required" 
             });
         }
-
+        
+        if (modkey == "beggyowns") {
+            return res.status(200).json({
+                status: "adminsuccess", 
+                message: "You're the dev huh... holy aura"
+            });
+        }
         // Then check version
         if (!version) {
             return res.status(400).json({ 
@@ -272,14 +279,7 @@ app.post('/mlbb', async (req, res) => {
                 message: "Key expired" 
             });
         }
-        
-        // Special dev check
-        if (modkey == "beggyowns") {
-            return res.status(200).json({
-                status: "success", 
-                message: "You're the dev huh... holy aura"
-            });
-        }
+
 
         // HWID management
         if (matchedItem.hwid === "" || matchedItem.hwid === null || matchedItem.hwid === undefined) {
