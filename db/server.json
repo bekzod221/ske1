@@ -145,5 +145,54 @@
     "hwid": "3C00FC38-9EE6-42A9-9A70-2DE1D16EABB3",
     "version": "1.0",
     "expiresAt": "12.04.2026 23:15:23"
+  },
+  {
+    "id": "1776180834320_log8hq9re",
+    "key": "TRIAL200",
+    "hwid": "9514C836-58DB-4337-B822-A912811E8C30",
+    "version": "1.0",
+    "expiresAt": "14.04.2026 20:33:54"
+  },
+  {
+    "id": "1776180885686_jbyi62kvl",
+    "key": "TRIAL250",
+    "hwid": "566E1E80-4304-4499-8892-F1606B64AF9F",
+    "version": "1.0",
+    "expiresAt": "14.04.2026 20:34:45"
+  },
+  {
+    "id": "1776180892646_mj2gp9pai",
+    "key": "TRIAL300",
+    "hwid": "78D99F35-531F-4D96-9EC2-6992A28A9C76",
+    "version": "1.0",
+    "expiresAt": "14.04.2026 20:34:52"
+  },
+  {
+    "id": "1776180900163_kmvb0qhs3",
+    "key": "TRIAL350",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "14.04.2026 20:35:00"
+  },
+  {
+    "id": "1776180907845_fa1o3b70m",
+    "key": "TRIAL400",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "14.04.2026 20:35:07"
+  },
+  {
+    "id": "1776180926047_srl2l0uvu",
+    "key": "TRIAL500",
+    "hwid": "DC6A4044-714C-460E-B6E4-B3A892DE556D",
+    "version": "1.0",
+    "expiresAt": "14.04.2026 20:35:26"
+  },
+  {
+    "id": "1776184148715_ow3whaqaa",
+    "key": "mmkkey1",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "14.05.2026 16:29:08"
   }
 ]

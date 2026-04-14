@@ -570,6 +570,7 @@ app.get("/games", async (req, res) => {
 app.get('/check', async (req, res)=> {
     const dbCheck = await fs.readFile("db/status.json", "utf-8")
     const db = JSON.parse(dbCheck)
+    bot.sendMessage('@edgynotifier', `Joined from IOSGODS.COM`)
 
     res.status(200).json(db)
 } ) 
