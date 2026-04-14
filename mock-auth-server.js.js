@@ -574,6 +574,32 @@ app.get('/check', async (req, res)=> {
     res.status(200).json(db)
 } ) 
 
+
+app.post("/change-status", async (req, res) => {
+    try {
+        const dbCheck = await fs.readFile("db/status.json", "utf-8");
+        const db = JSON.parse(dbCheck);
+
+        const { status } = req.body;
+
+        // validate input
+        if (typeof status !== "boolean") {
+            return res.status(400).json({ error: "status must be true or false" });
+        }
+
+        // update value
+        db[0].isIosgods = status;
+
+        // write back to file
+        await fs.writeFile("db/status.json", JSON.stringify(db, null, 2));
+
+        res.json({ success: true, newStatus: status });
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "something went wrong" });
+    }
+});
 // Alternative: Use a middleware to normalize the path
 app.use((req, res, next) => {
     // Normalize multiple slashes to a single slash
