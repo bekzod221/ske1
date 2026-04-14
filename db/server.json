@@ -44,7 +44,7 @@
   {
     "id": "1774745950383_42wjsuqqw",
     "key": "bekzod",
-    "hwid": "5DDECE76-8076-43AF-8E41-84354089747E",
+    "hwid": "FCAF846C-5842-4CA9-8789-A3137A06841F",
     "version": "1.0",
     "expiresAt": "29.03.2027 00:59:10"
   },
@@ -138,5 +138,12 @@
     "hwid": "44FAF582-F789-4BE1-A86B-D4C7C15B360F",
     "version": "1.0",
     "expiresAt": "05.05.2026 08:39:17"
+  },
+  {
+    "id": "1775949323144_4r4dv3tkv",
+    "key": "beggytheone",
+    "hwid": "3C00FC38-9EE6-42A9-9A70-2DE1D16EABB3",
+    "version": "1.0",
+    "expiresAt": "12.04.2026 23:15:23"
   }
 ]

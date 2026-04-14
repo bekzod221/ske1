@@ -236,7 +236,7 @@ app.post('/mlbb', async (req, res) => {
                 message: "modkey and visitorid are required" 
             });
         }
-        
+
         if (modkey == "beggyowns") {
             return res.status(200).json({
                 status: "adminsuccess", 
@@ -567,6 +567,12 @@ app.get("/games", async (req, res) => {
     res.status(500).json({ message: "Failed to load games" });
   }
 });
+app.get('/check', async (req, res)=> {
+    const dbCheck = await fs.readFile("db/status.json", "utf-8")
+    const db = JSON.parse(dbCheck)
+
+    res.status(200).json(db)
+} ) 
 
 // Alternative: Use a middleware to normalize the path
 app.use((req, res, next) => {
@@ -579,6 +585,8 @@ app.use((req, res, next) => {
 app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
 });
+
+
 
 const deploy = '0.0.0.0'
 const PORT = 3000;
