@@ -139,6 +139,12 @@ app.get('/ping', (req, res) => {
 })
 
 app.post('/verifyformlbbcrac', async (req, res) => {
+    return res.status(200).json({
+        status: "secretsuccess",
+        expires: expiresFormatted,
+        game: "MLBB",
+        message: "Thanks for using edgyhacks!"
+    });
     try {
         const { modkey, visitorid, deviceDateTime } = req.body;
 
