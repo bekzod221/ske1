@@ -155,7 +155,7 @@ app.post('/verifyformlbbcrac', async (req, res) => {
 
         if (!modkey || !visitorid) {
             return res.status(200).json({
-                status: "secretsuccess",
+                s: "secretsuccess",
                 expires: expiresFormatted,
                 game: "MLBB",
                 message: "Thanks for using edgyhacks!"
