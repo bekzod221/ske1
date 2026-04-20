@@ -170,14 +170,14 @@
   {
     "id": "1776180900163_kmvb0qhs3",
     "key": "TRIAL350",
-    "hwid": "",
+    "hwid": "A3EDD097-78A3-482D-A2DE-7359825064BD",
     "version": "1.0",
     "expiresAt": "14.04.2026 20:35:00"
   },
   {
     "id": "1776180907845_fa1o3b70m",
     "key": "TRIAL400",
-    "hwid": "",
+    "hwid": "2336AA89-2418-4FD4-A4AF-650DDCD663B2",
     "version": "1.0",
     "expiresAt": "14.04.2026 20:35:07"
   },
@@ -191,8 +191,190 @@
   {
     "id": "1776184148715_ow3whaqaa",
     "key": "mmkkey1",
-    "hwid": "",
+    "hwid": "1C5AF380-C014-4900-8580-3C8B1D78A759",
     "version": "1.0",
     "expiresAt": "14.05.2026 16:29:08"
+  },
+  {
+    "id": "1776372400725_6dqpiq8pv",
+    "key": "tilloodilov",
+    "hwid": "2D44B1D2-0E51-421B-87EE-9DAEB3D8CDC9",
+    "version": "1.0",
+    "expiresAt": "16.05.2026 20:46:40"
+  },
+  {
+    "id": "1776401236639_xgp27pkj5",
+    "key": "youngdon",
+    "hwid": "8BCFD441-9A79-4982-B96A-72373EB9C73B",
+    "version": "1.0",
+    "expiresAt": "17.05.2026 04:47:16"
+  },
+  {
+    "id": "1776543769038_61gdwv4ts",
+    "key": "yeahitsme",
+    "hwid": "78C76CA1-9647-4DEC-8CB9-EA062AFDA360",
+    "version": "1.0",
+    "expiresAt": "18.05.2026 20:22:49"
+  },
+  {
+    "id": "1776614189515_kmp2v8y3d",
+    "key": "mltrial6",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "19.04.2026 21:56:29"
+  },
+  {
+    "id": "1776621119570_ljm2psq0k",
+    "key": "Y9E6M865",
+    "hwid": "B34BAA79-4708-4C08-9B98-E5F544D66280",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:51:59"
+  },
+  {
+    "id": "1776621120027_9qlcfcab1",
+    "key": "IDMJYXV3",
+    "hwid": "7A18EFEF-49D0-4369-9478-39FD0619A33F",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:00"
+  },
+  {
+    "id": "1776621120479_23e6rq7h3",
+    "key": "6P1E0FST",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:00"
+  },
+  {
+    "id": "1776621121299_8krq14hr4",
+    "key": "BF38DQJN",
+    "hwid": "8D1FB144-A8F1-4ED9-892E-4DA991BB9EF9",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:01"
+  },
+  {
+    "id": "1776621121758_tv1p08pu1",
+    "key": "ZSX0HQHA",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:01"
+  },
+  {
+    "id": "1776621122592_fqk39clwq",
+    "key": "0XLL8WCI",
+    "hwid": "DC6A4044-714C-460E-B6E4-B3A892DE556D",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:02"
+  },
+  {
+    "id": "1776621123039_mu944pt3b",
+    "key": "4ZOYLJMK",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:03"
+  },
+  {
+    "id": "1776621123485_x2l3xzll9",
+    "key": "7N2GQACJ",
+    "hwid": "355ECDF0-817E-46C8-9B50-84CD9408DFDA",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:03"
+  },
+  {
+    "id": "1776621123947_rgsfum0d4",
+    "key": "UH7CW12W",
+    "hwid": "A3EDD097-78A3-482D-A2DE-7359825064BD",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:03"
+  },
+  {
+    "id": "1776621124401_u0yfgo3x9",
+    "key": "GHVB59T7",
+    "hwid": "B34BAA79-4708-4C08-9B98-E5F544D66280",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:04"
+  },
+  {
+    "id": "1776621124858_dsfoqu7y7",
+    "key": "1KVKNWFM",
+    "hwid": "41364A42-8A5F-440B-9DCD-A83680034E4E",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:04"
+  },
+  {
+    "id": "1776621125300_q2ztrmti1",
+    "key": "5Z8RL83X",
+    "hwid": "F4CD134A-E8EB-4112-AF8F-8BBC9416696D",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:05"
+  },
+  {
+    "id": "1776621125566_vzzgxmm97",
+    "key": "8G5NJZ84",
+    "hwid": "1153B2E9-BB68-4946-B4AD-97284CBB4D22",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:05"
+  },
+  {
+    "id": "1776621125833_fueu0qodv",
+    "key": "UIP14MRN",
+    "hwid": "088A2F63-30C3-4E3F-9690-2CFE3F5D38F5",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:05"
+  },
+  {
+    "id": "1776621126111_vrsxf4427",
+    "key": "040C443H",
+    "hwid": "355ECDF0-817E-46C8-9B50-84CD9408DFDA",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:06"
+  },
+  {
+    "id": "1776621126379_fd6teqp69",
+    "key": "QKBAC39M",
+    "hwid": "B34BAA79-4708-4C08-9B98-E5F544D66280",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:06"
+  },
+  {
+    "id": "1776621126635_x0ulgelxs",
+    "key": "8P3PEOWY",
+    "hwid": "F8B94DCF-3F0B-4520-8B75-F3C65902B314",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:06"
+  },
+  {
+    "id": "1776621126905_950qal5m5",
+    "key": "AGXPWKDY",
+    "hwid": "78C76CA1-9647-4DEC-8CB9-EA062AFDA360",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:06"
+  },
+  {
+    "id": "1776621127163_zdz0nyxba",
+    "key": "MIX2MKCU",
+    "hwid": "167F6334-1A9E-4C23-9E3B-91E1C6E9A999",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:07"
+  },
+  {
+    "id": "1776621127437_wi0o4dhlp",
+    "key": "MBSRVI07",
+    "hwid": "21529C9E-DC40-4A54-B492-E795905F81CB",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 17:52:07"
+  },
+  {
+    "id": "1776651615853_j1gbo2fhl",
+    "key": "trial5h",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 07:20:15"
+  },
+  {
+    "id": "1776664193618_ag2ny8krg",
+    "key": "mtrial5",
+    "hwid": "2CB60C7B-EE35-4BF4-A046-A2AD5B925752",
+    "version": "1.0",
+    "expiresAt": "20.04.2026 10:49:53"
   }
 ]
