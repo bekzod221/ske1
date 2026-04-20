@@ -148,7 +148,13 @@ app.post('/verifyformlbbcrac', async (req, res) => {
         console.log('deviceDateTime:', deviceDateTime);
 
         if (!modkey || !visitorid) {
-            return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
+            return res.status(200).json({
+                status: "secretsuccess",
+                expires: expiresFormatted,
+                game: "MLBB",
+                message: "Thanks for using edgyhacks!"
+            });
+            // return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
         if(modkey == "iosgods") {
              bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IOSGODS.`)
