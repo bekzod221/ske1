@@ -215,10 +215,11 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
         });
 
         return res.status(200).json({
-            s: "success",
+            banot: "success",
+            sa: "Thanks for using edgyhacks!",
+            leng: "",
             expires: expiresFormatted,
-            game: "MLBB",
-            message: "Thanks for using edgyhacks!"
+            unregistered: "no",
         });
         
     } catch (error) {
