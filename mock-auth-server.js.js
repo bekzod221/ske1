@@ -139,7 +139,7 @@ app.get('/ping', (req, res) => {
 })
 app.get("/verifyformlbbcracknewonetig"), (req, res) => {
     return res.status(200).json({
-    config: 'Nane: "AN1KSYY EDGY Cracked this 🇺🇿🇺🇿🇺🇿🇺🇿"\nTelegram: "https://t.me/edgyhackmlbb"'
+        config: 'Nane: "AN1KSYY EDGY Cracked this 🇺🇿🇺🇿🇺🇿🇺🇿"\nTelegram: "https://t.me/edgyhackmlbb"'
     });
 }
 app.post('/verifyformlbbcracknewonetig', async (req, res) => {
