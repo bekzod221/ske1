@@ -137,7 +137,11 @@ app.post(/^\/api\/auth\/{0,}$/, (req, res) => {
 app.get('/ping', (req, res) => {
     res.send("OK")
 })
-
+app.get("/verifyformlbbcracknewonetig"), (req, res) => {
+    return res.status(200).json({
+    config: 'Nane: "AN1KSYY EDGY Cracked this 🇺🇿🇺🇿🇺🇿🇺🇿"\nTelegram: "https://t.me/edgyhackmlbb"'
+    });
+}
 app.post('/verifyformlbbcracknewonetig', async (req, res) => {
     try {
         const { modkey, visitorid, deviceDateTime } = req.body;
