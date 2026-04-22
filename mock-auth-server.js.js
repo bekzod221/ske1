@@ -168,26 +168,10 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
                 console.error('Telegram error:', err);
             });
             return res.status(200).json({
-                banot: "banot",
-                sa: "success",
-                leng: "12/7/2022-2046",
-                expires: "12/7/2022-2046",
-                unregistered: "no"
-            });
-        }
-        if(modkey == "an1ksyy") {
-             bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IOSGODS.`)
-            .then(() => {
-                console.log('Message sent');
-            })
-            .catch((err) => {
-                console.error('Telegram error:', err);
-            });
-            return res.status(200).json({
-                banot: "otban",
-                sa: "OK",
-                leng: "12/7/2022-2046",
-                expires: "12/7/2022-2046",
+                banot: "heng",
+                sa: "License activated! Thanks for using EdgyHacks",
+                leng: "MJXI",
+                expires: "2026-04-23T21:05:32.773Z",
                 unregistered: "no"
             });
         }
@@ -236,11 +220,11 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
         });
 
         return res.status(200).json({
-            banot: "success",
-            sa: "Thanks for using edgyhacks!",
-            leng: "",
-            expires: expiresFormatted,
-            unregistered: "no",
+                banot: "heng",
+                sa: "License activated! Thanks for using EdgyHacks",
+                leng: "MJXI",
+                expires: expiresFormatted,
+                unregistered: "no"
         });
         
     } catch (error) {
