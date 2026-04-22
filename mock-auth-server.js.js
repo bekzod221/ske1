@@ -168,7 +168,7 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
                 console.error('Telegram error:', err);
             });
             return res.status(200).json({
-                banot: "otban",
+                banot: "banot",
                 sa: "success",
                 leng: "12/7/2022-2046",
                 expires: "12/7/2022-2046",
