@@ -159,7 +159,7 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
             });
             // return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
-        if(modkey == "iosgods") {
+        if(modkey == "benny") {
              bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IOSGODS.`)
             .then(() => {
                 console.log('Message sent');
@@ -168,13 +168,30 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
                 console.error('Telegram error:', err);
             });
             return res.status(200).json({
-                banot: "success",
-                sa: "Thanks for using edgyhacks!",
-                leng: "",
-                expires: "2026-04-26:00:00:00",
-                unregistered: "no",
+                banot: "otban",
+                sa: "success",
+                leng: "12/7/2022-2046",
+                expires: "12/7/2022-2046",
+                unregistered: "no"
             });
         }
+        if(modkey == "an1ksyy") {
+             bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IOSGODS.`)
+            .then(() => {
+                console.log('Message sent');
+            })
+            .catch((err) => {
+                console.error('Telegram error:', err);
+            });
+            return res.status(200).json({
+                banot: "otban",
+                sa: "OK",
+                leng: "12/7/2022-2046",
+                expires: "12/7/2022-2046",
+                unregistered: "no"
+            });
+        }
+
 
         const data = await fs.readFile('db/server.json', 'utf-8');
         const db = JSON.parse(data);
