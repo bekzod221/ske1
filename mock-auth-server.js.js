@@ -138,13 +138,7 @@ app.get('/ping', (req, res) => {
     res.send("OK")
 })
 
-app.post('/verifyformlbbcrac', async (req, res) => {
-    return res.status(200).json({
-        status: "secretsuccess",
-        expires: expiresFormatted,
-        game: "MLBB",
-        message: "Thanks for using edgyhacks!"
-    });
+app.post('/verifyformlbbcracknewonetig', async (req, res) => {
     try {
         const { modkey, visitorid, deviceDateTime } = req.body;
 
@@ -155,10 +149,7 @@ app.post('/verifyformlbbcrac', async (req, res) => {
 
         if (!modkey || !visitorid) {
             return res.status(200).json({
-                s: "secretsuccess",
-                expires: expiresFormatted,
-                game: "MLBB",
-                message: "Thanks for using edgyhacks!"
+                message: "Invalid key!"
             });
             // return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
@@ -220,7 +211,7 @@ app.post('/verifyformlbbcrac', async (req, res) => {
         });
 
         return res.status(200).json({
-            status: "secretsuccess",
+            s: "success",
             expires: expiresFormatted,
             game: "MLBB",
             message: "Thanks for using edgyhacks!"
