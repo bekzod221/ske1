@@ -140,7 +140,7 @@ app.get('/ping', (req, res) => {
 
 app.get("/verifyformlbbcracknewonetig", (req, res) => {
         return res.status(200).json({
-        config: 'Nane: "AN1KSYY EDGY Cracked this 🇺🇿🇺🇿🇺🇿🇺🇿"\nTelegram: "https://t.me/edgyhackmlbb"'
+        config: 'Nane: "Melonity | Mobile Legends"\nTelegram: "https://t.me/melonityios"'
     });
 }) 
 
@@ -197,7 +197,13 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
             matchedItem.hwid = visitorid;
             await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
         } else if (matchedItem.hwid !== visitorid) {
-            return res.status(200).json({ status: "error", message: "THIS KEY IS USED BY ANOTHER DEVICE! Please get a new key" });
+            return res.status(200).json({
+                banot: "otban",
+                sa: "THIS KEY IS USED BY ANOTHER DEVICE! Please get a new key",
+                leng: "",
+                expires: "",
+                unregistered: "yes"
+            });
         }
 
         // Successful verification - respond similarly to the previous hardcoded route,
@@ -221,7 +227,7 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
 
         return res.status(200).json({
                 banot: "heng",
-                sa: "License activated! Thanks for using EdgyHacks",
+                sa: "License activated! Thanks for using Melonity♦️",
                 leng: "MJXI",
                 expires: expiresFormatted,
                 unregistered: "no"
@@ -229,7 +235,13 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
         
     } catch (error) {
         console.error('Error in /verifyformlbbcrack:', error);
-        return res.status(500).json({ status: "error", message: "Invalid Key" });
+                return res.status(200).json({
+                banot: "otban",
+                sa: "Invalid Key!",
+                leng: "",
+                expires: "",
+                unregistered: "yes"
+        });
     }
 })
 
