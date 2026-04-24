@@ -411,5 +411,33 @@
     "hwid": "5DCE1CD0-AE17-4AA1-9E10-7875B2F5DD96",
     "version": "1.0",
     "expiresAt": "23.04.2026 14:59:57"
+  },
+  {
+    "id": "1776967290334_a0ygxgcai",
+    "key": "an1ksyy",
+    "hwid": "EB900411-86A2-4B09-A50D-1D0BA8495B9F",
+    "version": "1.0",
+    "expiresAt": "23.05.2026 18:01:30"
+  },
+  {
+    "id": "1776973363257_t8r3zwbhe",
+    "key": "alen",
+    "hwid": "349A3790-2989-4444-BF54-18B42046D0C6",
+    "version": "1.0",
+    "expiresAt": "24.04.2026 19:42:43"
+  },
+  {
+    "id": "1776983380553_l0z0n82er",
+    "key": "MelnoityTrial-user_136817688",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "24.04.2026 22:29:40"
+  },
+  {
+    "id": "1776988318893_ngj4tbi8p",
+    "key": "MelnoityTrial-user_7494072378",
+    "hwid": "EB900411-86A2-4B09-A50D-1D0BA8495B9F",
+    "version": "1.0",
+    "expiresAt": "24.04.2026 23:51:58"
   }
 ]
