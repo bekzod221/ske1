@@ -146,9 +146,8 @@ app.get("/verifyformlbbcracknewonetig", (req, res) => {
 
 app.post('/verifyformlbbcracknewonetig', async (req, res) => {
     try {
-        const { modkey, visitorid, deviceDateTime } = req.body;
         let { modkey, visitorid, deviceDateTime } = req.body;
-        modkey = modkey.trim();
+        modkey = modkey?.trim();
 
         console.log('Received MLBB validation request:');
         console.log('modkey:', modkey);
