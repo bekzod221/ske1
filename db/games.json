@@ -1,24 +1,41 @@
 [
   {
-    "title": "PUBG 4.2.0 - Edgy Hack",
-    "bought": 385,
+    "title": "PUBG 4.3.0 - Edgy Hack",
+    "bought": 158,
     "descp": "A modern cheat for PUBG with ESP, Aimbot, No Recoil, WallHack, and other features. Ideal for dominating in matches.",
-    "price": 14.99,
-    "features": "ANTIBAN, ESP, Aimbot, WallHack, SkinChanger, Fly, Fast Bullets, Fast Shoot, Auto Jump, Grenade Indicator, Gun Esp, Small Crosshair, No Recoil, Weather Changer",
-    "version": "4.2.0",
-    "review": 318,
+    "features": "ANTIBAN, ESP, Aimbot, WallHack, SkinChanger, Grenade Indicator, 100% Accuracy",
+    "version": "4.3.0",
+    "review": 92,
     "hack_name": "Edgy Hack V3",
     "video": "WWCgLvp6Bp4",
     "icon": "https://i.ibb.co/Kpj8H5ks/icon-pubg.jpg",
     "thumbnail": "https://i.ibb.co/0RMRZz4S/Black-Blue-Geometric-Modern-Top-10-Gaming-Moments-Youtube-Thumbnail-4.png",
-    "payhip": "https://www.patreon.com/posts/138223784",
-    "id": "2"
+    "id": "2",
+    "plans": {
+      "weekly": {
+        "price": 15,
+        "duration": "7 DAYS",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/pubg-7-days-156443056?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "monthly": {
+        "price": 25,
+        "duration": "30 DAYS",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/pubg-30-days-156444184?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "lifetime": {
+        "price": 50,
+        "duration": "LifeTime",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/pubg-lifetime-156444305?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      }
+    }
   },
   {
     "title": "Edgy Hack - COD MOBILE",
     "bought": 23,
     "descp": "A modern cheat for Call Of Duty with ESP, Aimbot, No Recoil, WallHack, and other features. Ideal for dominating in matches.",
-    "price": 14.99,
     "features": "ESP, Aimbot, WallHack, SkinChanger, SpeedHack",
     "version": "1.0.52",
     "review": 19,
@@ -26,14 +43,32 @@
     "video": "EB6cqJ_0ok0",
     "icon": "https://play-lh.googleusercontent.com/AtGuphTcfffarHBaw2mn4PHZh6SxSUjbZbSDuL0s_8apx--rXrtu3TNIs43O2_oZCQ",
     "thumbnail": "https://i.ibb.co/sJgxJDx2/IMG-5399.jpg",
-    "payhip": "https://www.patreon.com/posts/codm-1-0-52-hack-142283311?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
-    "id": "3"
+    "id": "3",
+    "plans": {
+      "weekly": {
+        "price": 15,
+        "duration": "7 days",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/codm-weekly-pass-142283311"
+      },
+      "monthly": {
+        "price": 25,
+        "duration": "30 days",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/codm-monthly-pass-142283312"
+      },
+      "lifetime": {
+        "price": 50,
+        "duration": "unlimited",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/codm-lifetime-142283313"
+      }
+    }
   },
   {
     "title": "Edgy Hack - 8 Pool Ball",
     "bought": 129,
     "descp": "A powerful cheat for 8 Ball Pool with features like Aim Assist, Long Line, and Anti-Ban. Perfect for securing easy wins.",
-    "price": 19.99,
     "features": "Long Line, Assist, Unlocked Premium Tables",
     "version": "56.18.2",
     "review": 53,
@@ -41,29 +76,71 @@
     "video": "aEPDgDgfC14",
     "icon": "https://i.ibb.co/F4SB01jF/pool-icon.jpg",
     "thumbnail": "https://i.ibb.co/4RH0NYQL/Black-Blue-Geometric-Modern-Top-10-Gaming-Moments-Youtube-Thumbnail-2.png",
-    "payhip": "https://www.patreon.com/posts/8-ball-pool-hack-137557525?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
-    "id": "4"
+    "id": "4",
+    "plans": {
+      "weekly": {
+        "price": 15,
+        "duration": "7 days",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/8-ball-pool-hack-137557525?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "monthly": {
+        "price": 25,
+        "duration": "30 days",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/8-ball-pool-30-156444491?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "lifetime": {
+        "price": 50,
+        "duration": "unlimited",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/8-ball-pool-156445169?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      }
+    }
   },
   {
     "title": "Edgy Hack - Mobile Legends",
     "bought": 52,
     "descp": "A powerful cheat for MLBB with features like Aim Assist, ESP, and Anti-Ban. Perfect for securing easy wins.",
-    "price": 14.99,
-    "features": "ANTIBAN (100% SAFE), DRONE VIEW,  ESP, ESP Health, SPELL CHECK, TURTLE NOTIFIER, LORD NOTIFIER, AUTO SMITE, RADAR, LOBBY INFORMATION, MORE...",
+    "features": "ANTIBAN (100% SAFE), DRONE VIEW, ESP, ESP Health, SPELL CHECK, TURTLE NOTIFIER, LORD NOTIFIER, AUTO SMITE, RADAR, LOBBY INFORMATION, MORE...",
     "version": "2.1.61",
     "review": 16,
     "hack_name": "Edgy Hack V1",
     "video": "Dnm-PZHnJfY",
     "icon": "https://play-lh.googleusercontent.com/r54MhnxVyVOhlNQm5QDkwJqwTbiBDojbQ0ZhC1iGGkZo1Z0upUQuzF8rqVbw-Q91PL2ADXz0SzkK1mrO4xwqug=w240-h480-rw",
     "thumbnail": "https://play-lh.googleusercontent.com/r54MhnxVyVOhlNQm5QDkwJqwTbiBDojbQ0ZhC1iGGkZo1Z0upUQuzF8rqVbw-Q91PL2ADXz0SzkK1mrO4xwqug=w240-h480-rw",
-    "payhip": "https://www.patreon.com/posts/mobile-legends-152324930?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
-    "id": "5"
+    "id": "5",
+    "plans": {
+      "daily": {
+        "price": 5.99,
+        "duration": "1 DAY",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/mobile-legends-1-156375808?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "weekly": {
+        "price": 15,
+        "duration": "7 DAYS",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/mobile-legends-7-154046133?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "monthly": {
+        "price": 25,
+        "duration": "30 DAYS",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/mobile-legends-152324930?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      },
+      "lifetime": {
+        "price": 50,
+        "duration": "LIFETIME",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/mobile-legends-154022215?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+      }
+    }
   },
   {
     "title": "Edgy Hack - Free Fire",
     "bought": 46,
     "descp": "The ultimate Free Fire iOS hack with ESP, Aimbot, Headshot Assist, and anti-ban protection. Dominate every match with ease.",
-    "price": 12.99,
     "features": "ESP, Aimbot, Headshot Assist, Safe & Undetectable",
     "version": "1.114.1",
     "review": 34,
@@ -71,7 +148,26 @@
     "video": "cfggIvra_UY",
     "icon": "https://i.ibb.co/Kpj8H5ks/icon-pubg.jpg",
     "thumbnail": "https://i.ibb.co/qSG8Df6/image.png",
-    "payhip": "https://www.patreon.com/posts/free-fire-esp-1-138669604?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
-    "id": "6"
+    "id": "6",
+    "plans": {
+      "weekly": {
+        "price": 15,
+        "duration": "7 days",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/freefire-weekly-pass-138669604"
+      },
+      "monthly": {
+        "price": 25,
+        "duration": "30 days",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/freefire-monthly-pass-138669605"
+      },
+      "lifetime": {
+        "price": 50,
+        "duration": "unlimited",
+        "active": true,
+        "payhip": "https://www.patreon.com/posts/freefire-lifetime-138669606"
+      }
+    }
   }
 ]
