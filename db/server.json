@@ -548,7 +548,7 @@
   {
     "id": "1777023335085_whasur6u4",
     "key": "EdgyTrial-user_908186935",
-    "hwid": "",
+    "hwid": "79B10213-D7DB-4D81-9E2E-1AC63B544EE3",
     "version": "1.0",
     "expiresAt": "25.04.2026 09:35:35"
   },
@@ -562,7 +562,7 @@
   {
     "id": "1777032302746_3gpctzxbe",
     "key": "EdgyTrial-user_6419986551",
-    "hwid": "",
+    "hwid": "7E5519AF-7157-42F7-B3A2-45AE70487EFD",
     "version": "1.0",
     "expiresAt": "25.04.2026 12:05:02"
   },
@@ -579,5 +579,61 @@
     "hwid": "99998A46-1CBE-4489-8394-30709688339D",
     "version": "1.0",
     "expiresAt": "25.04.2026 13:27:10"
+  },
+  {
+    "id": "1777045889555_2rf1ndpbn",
+    "key": "EdgyTrial-user_7988477246",
+    "hwid": "69C41813-5D2C-4DC4-9E95-4D2C2EB0737C",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 15:51:29"
+  },
+  {
+    "id": "1777050837300_dd8sz26fa",
+    "key": "MelnoityTrial-user_7745880658",
+    "hwid": "F126D378-91F1-4ADC-9859-EBF119F16331",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 17:13:57"
+  },
+  {
+    "id": "1777052292383_mmit7140j",
+    "key": "anthony",
+    "hwid": "B1B90F5A-414F-4ED1-91B7-87B08C9B2E49",
+    "version": "1.0",
+    "expiresAt": "24.05.2026 17:38:12"
+  },
+  {
+    "id": "1777052961729_fu6559xv8",
+    "key": "EdgyTrial-user_7934027255",
+    "hwid": "2004AB1E-E83D-4AAD-9400-6E2BEBF0A74F",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 17:49:21"
+  },
+  {
+    "id": "1777063108432_2n1224kjp",
+    "key": "EdgyTrial-user_1179278923",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 20:38:28"
+  },
+  {
+    "id": "1777066871279_f5h7y5rvq",
+    "key": "EdgyTrial-user_8541397810",
+    "hwid": "3FAC15E0-8C1F-49B9-AB16-BE59DED00AFB",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 21:41:11"
+  },
+  {
+    "id": "1777068939109_ilvwzn164",
+    "key": "MelnoityTrial-user_7066702687",
+    "hwid": "826C6836-55AE-4384-AE0E-D8695C5546E9",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 22:15:39"
+  },
+  {
+    "id": "1777070276223_lw9a3y6jo",
+    "key": "MelnoityTrial-user_8409221666",
+    "hwid": "DC4A1D63-41F7-4300-8E93-1694741E6FFA",
+    "version": "1.0",
+    "expiresAt": "25.04.2026 22:37:56"
   }
 ]

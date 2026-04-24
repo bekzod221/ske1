@@ -160,8 +160,8 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
             });
             // return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
-        if(modkey == "benny") {
-             bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IOSGODS.`)
+        if(modkey == "ipaomtk") {
+             bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IPAOMTK.`)
             .then(() => {
                 console.log('Message sent');
             })
