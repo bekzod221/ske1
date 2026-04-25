@@ -170,7 +170,7 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
             });
             return res.status(200).json({
                 banot: "heng",
-                sa: "License activated! Thanks for using EdgyHacks",
+                sa: "Thanks for using ♦️Melonity :)",
                 leng: "MJXI",
                 expires: "2026-04-23T21:05:32.773Z",
                 unregistered: "no"
