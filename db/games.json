@@ -111,12 +111,6 @@
     "thumbnail": "https://play-lh.googleusercontent.com/r54MhnxVyVOhlNQm5QDkwJqwTbiBDojbQ0ZhC1iGGkZo1Z0upUQuzF8rqVbw-Q91PL2ADXz0SzkK1mrO4xwqug=w240-h480-rw",
     "id": "5",
     "plans": {
-      "daily": {
-        "price": 5.99,
-        "duration": "1 DAY",
-        "active": true,
-        "payhip": "https://www.patreon.com/posts/mobile-legends-1-156375808?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
-      },
       "weekly": {
         "price": 15,
         "duration": "7 DAYS",

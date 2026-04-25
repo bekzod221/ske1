@@ -611,7 +611,7 @@
   {
     "id": "1777063108432_2n1224kjp",
     "key": "EdgyTrial-user_1179278923",
-    "hwid": "",
+    "hwid": "BEF8E1CD-89F2-4718-A76C-C4C8408C7EBC",
     "version": "1.0",
     "expiresAt": "25.04.2026 20:38:28"
   },
@@ -635,5 +635,40 @@
     "hwid": "DC4A1D63-41F7-4300-8E93-1694741E6FFA",
     "version": "1.0",
     "expiresAt": "25.04.2026 22:37:56"
+  },
+  {
+    "id": "1777076877775_fthmdjkwr",
+    "key": "EdgyTrial-user_1728219424",
+    "hwid": "DE04D5B2-2AB8-4F46-889D-8640BAD766CA",
+    "version": "1.0",
+    "expiresAt": "26.04.2026 00:27:57"
+  },
+  {
+    "id": "1777080999671_m3a6hamor",
+    "key": "EdgyTrial-user_7666169990",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "26.04.2026 01:36:39"
+  },
+  {
+    "id": "1777085229038_yffyy7aaf",
+    "key": "EdgyTrial-user_7401018828",
+    "hwid": "B13D0367-DADB-45B8-B77F-3B02989AFBF7",
+    "version": "1.0",
+    "expiresAt": "26.04.2026 02:47:09"
+  },
+  {
+    "id": "1777095732261_jvzd5extu",
+    "key": "MelnoityTrial-user_8388767050",
+    "hwid": "1BF78E19-A851-46E9-B879-EE6ECDC19A8C",
+    "version": "1.0",
+    "expiresAt": "26.04.2026 05:42:12"
+  },
+  {
+    "id": "1777103188078_qnhvod6cx",
+    "key": "wexy",
+    "hwid": "",
+    "version": "1.0",
+    "expiresAt": "25.05.2026 07:46:28"
   }
 ]
