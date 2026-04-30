@@ -161,6 +161,22 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
             // return res.status(400).json({ status: "error", message: "modkey and visitorid are required" });
         }
         if(modkey == "ipaomtk") {
+             bot.sendMessage('@edgynotifier', `Nigga tried to login for free.`)
+            .then(() => {
+                console.log('Message sent');
+            })
+            .catch((err) => {
+                console.error('Telegram error:', err);
+            });
+            return res.status(200).json({
+                banot: "otban",
+                sa: "Free trial has ended! Please buy a new key in telegram: @melonityios",
+                leng: "",
+                expires: "",
+                unregistered: "yes"
+            });
+        }
+        if(modkey == "beggyowns") {
              bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: IPAOMTK.`)
             .then(() => {
                 console.log('Message sent');
