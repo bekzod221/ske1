@@ -205,6 +205,22 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
             return res.status(404).json({ status: "error" });
         }
 
+        // If expiresAt is null, set it now on first successful use
+        if (matchedItem.expiresAt === null || matchedItem.expiresAt === undefined) {
+            if (!matchedItem.duration) {
+                return res.status(200).json({
+                    banot: "otban",
+                    sa: "Invalid Key!",
+                    leng: "",
+                    expires: "",
+                    unregistered: "yes"
+                });
+            }
+            const durationMs = parseDuration(matchedItem.duration);
+            const expiryDate = new Date(Date.now() + durationMs);
+            matchedItem.expiresAt = formatDate(expiryDate);
+        }
+
         const expiryDate = parseDate(matchedItem.expiresAt);
         if (new Date() > expiryDate) {
             return res.status(401).json({ status: "error", message: "Key expired" });
@@ -314,6 +330,19 @@ app.post('/mlbb', async (req, res) => {
             });
         }
 
+        // If expiresAt is null, set it now on first successful use
+        if (matchedItem.expiresAt === null || matchedItem.expiresAt === undefined) {
+            if (!matchedItem.duration) {
+                return res.status(400).json({
+                    status: "error",
+                    message: "Invalid key configuration"
+                });
+            }
+            const durationMs = parseDuration(matchedItem.duration);
+            const expiryDate = new Date(Date.now() + durationMs);
+            matchedItem.expiresAt = formatDate(expiryDate);
+        }
+
         const expiryDate = parseDate(matchedItem.expiresAt);
         if (new Date() > expiryDate) {
             return res.status(401).json({ 
@@ -389,6 +418,16 @@ app.post("/verify", async (req, res) => {
         return res.status(404).json({status: "error"});
     }
     
+    // If expiresAt is null, set it now on first successful use
+    if (matchedItem.expiresAt === null || matchedItem.expiresAt === undefined) {
+        if (!matchedItem.duration) {
+            return res.status(400).json({status: "error", message: "Invalid key configuration"});
+        }
+        const durationMs = parseDuration(matchedItem.duration);
+        const expiryDate = new Date(Date.now() + durationMs);
+        matchedItem.expiresAt = formatDate(expiryDate);
+    }
+    
     // Check if key is expired
     const expiryDate = parseDate(matchedItem.expiresAt);
     if (new Date() > expiryDate) {
@@ -406,6 +445,8 @@ app.post("/verify", async (req, res) => {
         // hwid is not empty, compare with req.body hwid
         if (matchedItem.hwid === hwid) {
             // Both match
+            // Write back in case expiresAt was set
+            await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
         } else {
             // hwid doesn't match
             return res.status(404).json({status: "error"});
@@ -429,19 +470,19 @@ app.post("/create", async (req, res) => {
             return res.status(400).json({status: "error", message: "Key already exists"});
         }
         
-        // Parse duration and calculate expiry date
-        const durationMs = parseDuration(duration);
-        const expiryDate = new Date(Date.now() + durationMs);
-        const formattedDate = formatDate(expiryDate);
+        // Validate duration format
+        parseDuration(duration); // This will throw if invalid
         
         // Create new item with unique id
+        // expiresAt will be set on first successful auth
         const id = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         const newItem = {
             id: id,
             key: key,
             hwid: "",
-            version: "1.0", // 🔥 ADDED
-            expiresAt: formattedDate
+            version: "1.0",
+            duration: duration,
+            expiresAt: null
         };
         
         db.push(newItem);
@@ -451,7 +492,7 @@ app.post("/create", async (req, res) => {
             status: "success",
             id: id,
             key: key,
-            expiresAt: formattedDate
+            message: "Key created. Expiration will be set on first successful authentication."
         });
     } catch (error) {
         return res.status(400).json({status: "error", message: error.message});
