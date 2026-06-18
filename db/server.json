@@ -2,7 +2,7 @@
   {
     "id": "1774745950383_42wjsuqqw",
     "key": "bekzod",
-    "hwid": "",
+    "hwid": "EB900411-86A2-4B09-A50D-1D0BA8495B9F",
     "version": "1.0",
     "expiresAt": "29.03.2027 00:59:10"
   },
@@ -16,7 +16,7 @@
   {
     "id": "1778900391753_61x9bxptc",
     "key": "bread",
-    "hwid": "762EF83F-2295-465D-8B3B-77E19242FB3C",
+    "hwid": "BD802E5E-1E68-41EC-8A3D-055DFB24C581",
     "version": "1.0",
     "expiresAt": "16.05.2027 02:59:51"
   },
@@ -30,7 +30,7 @@
   {
     "id": "1778952873146_dh64ia6n0",
     "key": "beka",
-    "hwid": "9D7E3CFE-22B2-45B6-A55E-91E326E4BFA6",
+    "hwid": "62D5EA78-F81E-4C8E-BEB0-1864C18D8FBC",
     "version": "1.0",
     "expiresAt": "14.08.2026 17:34:33"
   },
@@ -57,36 +57,28 @@
     "expiresAt": "28.05.2026 12:14:51"
   },
   {
-    "id": "1779366001622_b1ra8sytt",
-    "key": "niga",
-    "hwid": "",
-    "version": "1.0",
-    "duration": "24h",
-    "expiresAt": null
-  },
-  {
     "id": "1779366757228_zsplj0ukp",
     "key": "snipes",
-    "hwid": "",
+    "hwid": "1E2B9D8FA95F4353969C1A081FA29D8B",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "28.05.2026 19:50:33"
   },
   {
     "id": "1779367678645_4am0qiq82",
     "key": "KT0ZVULV",
-    "hwid": "",
+    "hwid": "63DB3AC8-C6CF-4E2A-A258-3530E102C416",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "10.06.2026 14:03:20"
   },
   {
     "id": "1779367679186_nq7uowg9y",
     "key": "LB4JSLQD",
-    "hwid": "",
+    "hwid": "0086CD60-E8A9-4481-960F-FB885847627A",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "14.06.2026 03:48:10"
   },
   {
     "id": "1779367679486_cl474ceq6",
@@ -99,10 +91,10 @@
   {
     "id": "1779367680123_5xp2c4r5n",
     "key": "4U3MLYJ1",
-    "hwid": "",
+    "hwid": "63DB3AC8-C6CF-4E2A-A258-3530E102C416",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "17.06.2026 10:29:09"
   },
   {
     "id": "1779367680398_ot7vso9ab",
@@ -163,18 +155,18 @@
   {
     "id": "1779370949061_qgr77dy35",
     "key": "CG8HYYIJ",
-    "hwid": "",
+    "hwid": "80ABFA9F-65CA-462D-833E-7C5623CC3F87",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "15.07.2026 12:43:36"
   },
   {
     "id": "1779370949533_14cy3jj2j",
     "key": "T1YPUP5H",
-    "hwid": "",
+    "hwid": "88C830F6-3F7B-43EC-ACDA-355EDAD4D864",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "16.07.2026 12:32:51"
   },
   {
     "id": "1779370950028_memjaokod",
@@ -235,10 +227,10 @@
   {
     "id": "1779371132364_z1fjnvcwf",
     "key": "TMLMWZYH",
-    "hwid": "",
+    "hwid": "9896432E-2D15-4E5C-AA98-587CEC630B46",
     "version": "1.0",
     "duration": "365d",
-    "expiresAt": null
+    "expiresAt": "13.06.2027 08:53:39"
   },
   {
     "id": "1779371132823_4o1sg4kru",
@@ -315,26 +307,26 @@
   {
     "id": "1779371907834_283407kuj",
     "key": "O71NWQXE",
-    "hwid": "",
+    "hwid": "DF5F05C56C0541FBAE6D6B143C8EF80E",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "01.06.2026 01:25:10"
   },
   {
     "id": "1779371908767_t20wuaxpg",
     "key": "R2UATXE6",
-    "hwid": "",
+    "hwid": "6A47D98C78A1441CABB9844CA7297B6C",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "14.06.2026 19:56:07"
   },
   {
     "id": "1779371909809_vbo0d8m1a",
     "key": "FZ9192TU",
-    "hwid": "",
+    "hwid": "04BC6B85D75841FCB380F6740E9BAE06",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "21.06.2026 05:16:14"
   },
   {
     "id": "1779371910563_lr8cs3zc7",
@@ -395,50 +387,50 @@
   {
     "id": "1779375056076_sih9yqiaq",
     "key": "1OANOLEB",
-    "hwid": "",
+    "hwid": "B24119FF7DA640E9ABE042D63950F33C",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "29.06.2026 17:22:32"
   },
   {
     "id": "1779375056961_efhzozfw0",
     "key": "XJW1IK8K",
-    "hwid": "",
+    "hwid": "7859E3AEE8EC49E299C9A8AFFD94E4E5",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "27.06.2026 11:59:51"
   },
   {
     "id": "1779375057262_jqtjg9hen",
     "key": "YDZUOSJU",
-    "hwid": "",
+    "hwid": "8BAC239301394254953C01B674895352",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "28.06.2026 17:42:22"
   },
   {
     "id": "1779375057545_w6v9d0ve3",
     "key": "1ZZ3K9GO",
-    "hwid": "",
+    "hwid": "DEB3BD8B7B7443D68541DBBFE1EC287B",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "10.07.2026 11:21:53"
   },
   {
     "id": "1779375057843_h1gyqpu39",
     "key": "M5RNUTR9",
-    "hwid": "",
+    "hwid": "C7407920CC70494B867257DEF3AA5DD3",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "07.07.2026 02:23:12"
   },
   {
     "id": "1779375058126_yxukb9q90",
     "key": "BQYYOHYA",
-    "hwid": "",
+    "hwid": "290C87629C7F4E6588871BA2607669E6",
     "version": "1.0",
     "duration": "30d",
-    "expiresAt": null
+    "expiresAt": "14.07.2026 22:00:22"
   },
   {
     "id": "1779375058405_9ngog9cek",
@@ -791,5 +783,501 @@
     "version": "1.0",
     "duration": "365d",
     "expiresAt": null
+  },
+  {
+    "id": "1779383015637_m95xy52nl",
+    "key": "L1OQMI34",
+    "hwid": "AFF25F87-B1ED-4CAF-AD59-ADBFACC6289E",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:07:59"
+  },
+  {
+    "id": "1779383016166_jitdsun91",
+    "key": "5WCTVHC4",
+    "hwid": "5DBB52EE-9FC4-47D0-BD8D-5737EA8C8DD5",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "22.05.2026 04:42:01"
+  },
+  {
+    "id": "1779383016625_roub9wmtx",
+    "key": "0ZCTYVVT",
+    "hwid": "7A551D98-51EF-457A-AF7B-8F367770036C",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "22.05.2026 05:46:55"
+  },
+  {
+    "id": "1779383017155_p1djyq8ny",
+    "key": "ODM7CS0A",
+    "hwid": "7A551D98-51EF-457A-AF7B-8F367770036C",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "22.05.2026 10:15:44"
+  },
+  {
+    "id": "1779383017667_av7aa0k7n",
+    "key": "OBVUSVSX",
+    "hwid": "757AFC17-B300-44C1-8EC2-FDE6BBEDC78A",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "22.05.2026 07:41:57"
+  },
+  {
+    "id": "1779383018565_4oqv18ubb",
+    "key": "LR4DSIUA",
+    "hwid": "0E0E0399-17AE-4927-B75F-1E2E54EBE54D",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:10:46"
+  },
+  {
+    "id": "1779383019100_lh1okptss",
+    "key": "3W7XXZNO",
+    "hwid": "A1FD4DCA-5790-4DCE-B611-7880E1074F94",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:12:59"
+  },
+  {
+    "id": "1779383019554_qgln1r14t",
+    "key": "PZJLD1E4",
+    "hwid": "DC95A342-733A-4114-A70B-2DE1F39177C2",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:14:00"
+  },
+  {
+    "id": "1779383020056_6l9u1bwp9",
+    "key": "ZS6GEX10",
+    "hwid": "0E0E0399-17AE-4927-B75F-1E2E54EBE54D",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:10:17"
+  },
+  {
+    "id": "1779383020917_xe1bjttk7",
+    "key": "AX9ZZHCF",
+    "hwid": "6F15490B-408E-40B9-8C6B-D5144C9E9C8B",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:26:20"
+  },
+  {
+    "id": "1779383053683_6zxg1hfvq",
+    "key": "PHRDCHW6",
+    "hwid": "A1FD4DCA-5790-4DCE-B611-7880E1074F94",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:16:16"
+  },
+  {
+    "id": "1779383054162_bi11wpv0g",
+    "key": "KJ7NEI5L",
+    "hwid": "78F2CC42-5484-4E9F-91B8-38A0CA08AD70",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:06:54"
+  },
+  {
+    "id": "1779383054646_rlncrtql8",
+    "key": "PDSQ7LSV",
+    "hwid": "7A551D98-51EF-457A-AF7B-8F367770036C",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:16:12"
+  },
+  {
+    "id": "1779383055427_0ge6vqjyt",
+    "key": "W2L8L6VR",
+    "hwid": "0E0E0399-17AE-4927-B75F-1E2E54EBE54D",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:11:14"
+  },
+  {
+    "id": "1779383055869_ginxdkz5v",
+    "key": "HIU2CKKJ",
+    "hwid": "5B4ED3E2-49A9-4D0C-ABF3-6A89D8E9D7CC",
+    "version": "1.0",
+    "duration": "4h",
+    "expiresAt": "21.05.2026 21:23:42"
+  },
+  {
+    "id": "1779421095775_h9ozcvaoc",
+    "key": "shadow",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "9d",
+    "expiresAt": null
+  },
+  {
+    "id": "1779452888943_d264bqhqe",
+    "key": "U3LK9KHH",
+    "hwid": "A8D3D1BF-C567-48EE-86CD-E3DD2657F760",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:31:16"
+  },
+  {
+    "id": "1779452889238_dhhg542c6",
+    "key": "WJCGKPI4",
+    "hwid": "7A551D98-51EF-457A-AF7B-8F367770036C",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 09:31:29"
+  },
+  {
+    "id": "1779452889532_q6xfumpcv",
+    "key": "D3XNV7RP",
+    "hwid": "3AF86F54-A395-4110-8B82-22219BEBA08F",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:58:59"
+  },
+  {
+    "id": "1779452889823_w2lrpwwzl",
+    "key": "YG7KE4MC",
+    "hwid": "7A551D98-51EF-457A-AF7B-8F367770036C",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 10:47:54"
+  },
+  {
+    "id": "1779452890096_lchxoyd2l",
+    "key": "LJLBD2UA",
+    "hwid": "6902A200-2247-4A15-9B07-A2601A1CCA29",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 09:27:06"
+  },
+  {
+    "id": "1779452890365_3ydo7hfmk",
+    "key": "FL21C8CE",
+    "hwid": "DC95A342-733A-4114-A70B-2DE1F39177C2",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:33:31"
+  },
+  {
+    "id": "1779452890632_psopj8urd",
+    "key": "WUX9GTPR",
+    "hwid": "757AFC17-B300-44C1-8EC2-FDE6BBEDC78A",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 21:44:09"
+  },
+  {
+    "id": "1779452890925_46zz9gqwg",
+    "key": "OK632CPH",
+    "hwid": "D1EAFBB6-73E2-48FB-8634-556ACF5FF148",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:34:25"
+  },
+  {
+    "id": "1779452891196_2uuivut08",
+    "key": "ILT48ZYP",
+    "hwid": "5B4ED3E2-49A9-4D0C-ABF3-6A89D8E9D7CC",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 13:27:56"
+  },
+  {
+    "id": "1779452891463_irockcti2",
+    "key": "DQ08G6TF",
+    "hwid": "6F15490B-408E-40B9-8C6B-D5144C9E9C8B",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 17:27:14"
+  },
+  {
+    "id": "1779452891728_s4xli3vmq",
+    "key": "JA2FPTZ3",
+    "hwid": "5B4ED3E2-49A9-4D0C-ABF3-6A89D8E9D7CC",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 14:02:36"
+  },
+  {
+    "id": "1779452891997_kt8lcv6y9",
+    "key": "JC63BPK1",
+    "hwid": "488E488E-130C-444E-AF4B-8CD08FDEEBF2",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:58:23"
+  },
+  {
+    "id": "1779452892264_abacqi7pc",
+    "key": "VV6ZS75A",
+    "hwid": "78F2CC42-5484-4E9F-91B8-38A0CA08AD70",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:31:15"
+  },
+  {
+    "id": "1779452892882_i8ij483wd",
+    "key": "ZOSAHD9P",
+    "hwid": "A8D3D1BF-C567-48EE-86CD-E3DD2657F760",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 09:06:16"
+  },
+  {
+    "id": "1779452893154_74rd3xe91",
+    "key": "9IAFDV0U",
+    "hwid": "4D1DFCEA-10A3-40D4-81D6-947D21E56221",
+    "version": "1.0",
+    "duration": "20h",
+    "expiresAt": "23.05.2026 08:31:36"
+  },
+  {
+    "id": "1779461148919_73s6dweet",
+    "key": "trialmlbb",
+    "hwid": "D92CCEFC-508F-4D75-AD4A-CDAF56EED81A",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "23.05.2026 17:06:42"
+  },
+  {
+    "id": "1779527865092_5l7tr7whb",
+    "key": "shadownew",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "10d",
+    "expiresAt": null
+  },
+  {
+    "id": "1780327036381_5gxqwqshe",
+    "key": "XFJJOZMK",
+    "hwid": "AF02F9C8-6665-4E7A-8B14-2F6B3D6829A5",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:37:29"
+  },
+  {
+    "id": "1780327036683_2lqoftm75",
+    "key": "BBUVPUZ4",
+    "hwid": "10E961CD-D62E-49B9-8E21-157133EBC50B",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 22:27:28"
+  },
+  {
+    "id": "1780327036978_lzonk5308",
+    "key": "F2GSAEBM",
+    "hwid": "74C99E6E-8D8D-4286-A061-874185615006",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 06:55:52"
+  },
+  {
+    "id": "1780327037248_e2hdbn4b4",
+    "key": "SL33VTTY",
+    "hwid": "74C99E6E-8D8D-4286-A061-874185615006",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 16:44:56"
+  },
+  {
+    "id": "1780327038545_w95ib9v0z",
+    "key": "O6MIFA35",
+    "hwid": "018E120B-5476-4A64-B775-D94E4AB1CB5E",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 01:16:59"
+  },
+  {
+    "id": "1780327038808_3w1t8iokc",
+    "key": "RX4KRHQT",
+    "hwid": "5B4ED3E2-49A9-4D0C-ABF3-6A89D8E9D7CC",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 04:48:51"
+  },
+  {
+    "id": "1780327039073_4kre0c5as",
+    "key": "IWUNOKTS",
+    "hwid": "5B4ED3E2-49A9-4D0C-ABF3-6A89D8E9D7CC",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 03:21:53"
+  },
+  {
+    "id": "1780327039335_yuqnulrrn",
+    "key": "H7L8XB1V",
+    "hwid": "6F15490B-408E-40B9-8C6B-D5144C9E9C8B",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 23:24:03"
+  },
+  {
+    "id": "1780327039664_1qff82y93",
+    "key": "8XCNTO1V",
+    "hwid": "6F15490B-408E-40B9-8C6B-D5144C9E9C8B",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:23:22"
+  },
+  {
+    "id": "1780327039947_zikmbxse3",
+    "key": "LVVQIAM3",
+    "hwid": "74C99E6E-8D8D-4286-A061-874185615006",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 10:43:24"
+  },
+  {
+    "id": "1780327040230_baoj6ljg0",
+    "key": "4N8V93D8",
+    "hwid": "6F15490B-408E-40B9-8C6B-D5144C9E9C8B",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 09:39:11"
+  },
+  {
+    "id": "1780327040891_8cvhik3hp",
+    "key": "FFC1RYWH",
+    "hwid": "2282BA70-2C82-4745-8E79-8F191260EB01",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:58:31"
+  },
+  {
+    "id": "1780327041166_xyd533ri8",
+    "key": "1BSCYL6S",
+    "hwid": "D0E29D11-73F9-4DF2-8C9F-775EA1C5890C",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:19:34"
+  },
+  {
+    "id": "1780327041458_le89qb9ut",
+    "key": "8IBO5C4G",
+    "hwid": "2282BA70-2C82-4745-8E79-8F191260EB01",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "02.06.2026 00:27:35"
+  },
+  {
+    "id": "1780327041724_z2ouf7u4u",
+    "key": "QJOL2MJ1",
+    "hwid": "A1FD4DCA-5790-4DCE-B611-7880E1074F94",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:41:25"
+  },
+  {
+    "id": "1780327042041_zdbjyxk7c",
+    "key": "YCNLTKK1",
+    "hwid": "B9D5E795-C7C8-46DA-A1AE-0E8AC1DB4181",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 23:25:04"
+  },
+  {
+    "id": "1780327042314_meyrhk1az",
+    "key": "3DL7JHUC",
+    "hwid": "A13A674D-85AC-4B76-8346-A64D79132E8F",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:36:29"
+  },
+  {
+    "id": "1780327042630_k0cqqtr7f",
+    "key": "7IT520KR",
+    "hwid": "8C07D204-6DBC-41E1-A115-0FBA1FFEEEE8",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 23:19:00"
+  },
+  {
+    "id": "1780327042909_5xjq7127o",
+    "key": "2P7R8E0I",
+    "hwid": "243593D4-C9A6-4151-BB98-E556FE7D8C95",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:21:05"
+  },
+  {
+    "id": "1780327044237_0uzwmx72n",
+    "key": "0R7TX5G8",
+    "hwid": "5B4ED3E2-49A9-4D0C-ABF3-6A89D8E9D7CC",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "01.06.2026 21:18:46"
+  },
+  {
+    "id": "1780772189353_5eqs2jm0i",
+    "key": "snipestrial",
+    "hwid": "1E2B9D8FA95F4353969C1A081FA29D8B",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "07.06.2026 22:17:38"
+  },
+  {
+    "id": "1781135884264_fx4pmibzf",
+    "key": "mltrial33",
+    "hwid": "802390C3-E44F-4E1F-B832-B52E7D367230",
+    "version": "1.0",
+    "duration": "5h",
+    "expiresAt": "11.06.2026 14:21:28"
+  },
+  {
+    "id": "1781210779836_ki5tjoxuf",
+    "key": "trialml250",
+    "hwid": "FFB64313-FC80-402E-9AF8-49E2FA546883",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "12.06.2026 20:54:54"
+  },
+  {
+    "id": "1781213873901_k0euqfbrj",
+    "key": "pubg7d",
+    "hwid": "148D4F1FDBB04EDE908BA790B7C2CAD4",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": "19.06.2026 00:17:22"
+  },
+  {
+    "id": "1781281556008_jb2wc4ei0",
+    "key": "mlkey12",
+    "hwid": "3BEFBEEE-0D47-46AA-97C1-A74634503678",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": "19.06.2026 17:25:14"
+  },
+  {
+    "id": "1781355770302_9cttt0tix",
+    "key": "zxn30d",
+    "hwid": "2E85FD75FDAF4F19A5B0D01475D82BAE",
+    "version": "1.0",
+    "duration": "30d",
+    "expiresAt": "13.07.2026 13:42:50"
+  },
+  {
+    "id": "1781359027870_ol93oextr",
+    "key": "grisha",
+    "hwid": "A1694205-F95D-4F6A-A48D-CE87EA99DA78",
+    "version": "1.0",
+    "duration": "30d",
+    "expiresAt": "13.07.2026 14:17:03"
+  },
+  {
+    "id": "1781527401144_x4qmv8ppv",
+    "key": "artur",
+    "hwid": "58BF2011782D417DA02DF1AE4E26428C",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": "22.06.2026 13:45:31"
+  },
+  {
+    "id": "1781778215043_8esihy6du",
+    "key": "yarik",
+    "hwid": "5E47A08B-E75D-48F9-8528-660245BB30ED",
+    "version": "1.0",
+    "duration": "30d",
+    "expiresAt": "18.07.2026 10:35:38"
   }
 ]
