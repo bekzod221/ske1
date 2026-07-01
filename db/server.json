@@ -2,7 +2,7 @@
   {
     "id": "1774745950383_42wjsuqqw",
     "key": "bekzod",
-    "hwid": "EB900411-86A2-4B09-A50D-1D0BA8495B9F",
+    "hwid": "7BA5D8ECD4D24D29923C43A2A41F867B",
     "version": "1.0",
     "expiresAt": "29.03.2027 00:59:10"
   },
@@ -16,7 +16,7 @@
   {
     "id": "1778900391753_61x9bxptc",
     "key": "bread",
-    "hwid": "BD802E5E-1E68-41EC-8A3D-055DFB24C581",
+    "hwid": "94C07773-6F5B-4513-B1CE-25237976C61A",
     "version": "1.0",
     "expiresAt": "16.05.2027 02:59:51"
   },
@@ -99,10 +99,10 @@
   {
     "id": "1779367680398_ot7vso9ab",
     "key": "QKX19XZZ",
-    "hwid": "",
+    "hwid": "8E00F615-65E3-4858-A404-33CA314277FF",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "25.06.2026 12:50:37"
   },
   {
     "id": "1779367680692_onmk3z81o",
@@ -235,10 +235,10 @@
   {
     "id": "1779371132823_4o1sg4kru",
     "key": "9TVTI74Q",
-    "hwid": "",
+    "hwid": "FF67D011-52A1-40F9-9E74-D495BEA99BE0",
     "version": "1.0",
     "duration": "365d",
-    "expiresAt": null
+    "expiresAt": "01.07.2027 08:15:25"
   },
   {
     "id": "1779371133465_bq23udh0z",
@@ -331,10 +331,10 @@
   {
     "id": "1779371910563_lr8cs3zc7",
     "key": "2LIFG5NV",
-    "hwid": "",
+    "hwid": "17BE807AB9494B01A347D2FCCD33E501",
     "version": "1.0",
     "duration": "7d",
-    "expiresAt": null
+    "expiresAt": "02.07.2026 17:02:46"
   },
   {
     "id": "1779371911387_rejmyt459",
@@ -1279,5 +1279,117 @@
     "version": "1.0",
     "duration": "30d",
     "expiresAt": "18.07.2026 10:35:38"
+  },
+  {
+    "id": "1781881256432_f2djugsh4",
+    "key": "UW1O6S34",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": null
+  },
+  {
+    "id": "1781881256723_jq4l7hv8e",
+    "key": "OOISYE4Y",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": null
+  },
+  {
+    "id": "1781881257022_9p1w5bn6f",
+    "key": "HTAOKLYF",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": null
+  },
+  {
+    "id": "1781881257299_kfq8wmlw7",
+    "key": "JQN0ZVS9",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": null
+  },
+  {
+    "id": "1781881257880_r8pec9oty",
+    "key": "R66QV5L0",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "7d",
+    "expiresAt": null
+  },
+  {
+    "id": "1782062424378_q04qr248l",
+    "key": "trial333",
+    "hwid": "940A4E9E-4075-4F50-82A2-B5944F06BFF2",
+    "version": "1.0",
+    "duration": "6h",
+    "expiresAt": "21.06.2026 23:21:21"
+  },
+  {
+    "id": "1782484480713_ai3zjacd5",
+    "key": "dxreed",
+    "hwid": "58236391-D0E8-497E-996F-079F0735B350",
+    "version": "1.0",
+    "duration": "365d",
+    "expiresAt": "27.06.2027 08:42:13"
+  },
+  {
+    "id": "1782501962400_yo551s67q",
+    "key": "yeanigga",
+    "hwid": "78207AFF-7AD5-4421-968A-57BA0D5BD850",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "27.06.2026 19:26:08"
+  },
+  {
+    "id": "1782502860976_xxk11l6eb",
+    "key": "niggagay",
+    "hwid": "78207AFF-7AD5-4421-968A-57BA0D5BD850",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "27.06.2026 19:41:07"
+  },
+  {
+    "id": "1782506378760_ry5uor34a",
+    "key": "beggy",
+    "hwid": "78207AFF-7AD5-4421-968A-57BA0D5BD850",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "27.06.2026 20:39:41"
+  },
+  {
+    "id": "1782552425754_d7le2ls92",
+    "key": "zxnml",
+    "hwid": "969D2F56-2A59-410E-81C3-CD09AA097D45",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": "28.06.2026 10:14:45"
+  },
+  {
+    "id": "1782709443415_keg1yvbsf",
+    "key": "nigga",
+    "hwid": "78207AFF-7AD5-4421-968A-57BA0D5BD850",
+    "version": "1.0",
+    "duration": "30d",
+    "expiresAt": "29.07.2026 05:04:11"
+  },
+  {
+    "id": "1782828523313_28xonpc2d",
+    "key": "ipad",
+    "hwid": "9A395C2E-1DA8-4F3A-8EBF-2555F3780B68",
+    "version": "1.0",
+    "duration": "30d",
+    "expiresAt": "30.07.2026 14:08:47"
+  },
+  {
+    "id": "1782924661498_78ic4nwlo",
+    "key": "yoniggab",
+    "hwid": "",
+    "version": "1.0",
+    "duration": "24h",
+    "expiresAt": null
   }
 ]

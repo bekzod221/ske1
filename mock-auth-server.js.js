@@ -5,6 +5,17 @@ const fs = require("fs/promises");
 const TelegramBot = require('node-telegram-bot-api');
 const path = require("path")
 const cors = require("cors")
+const crypto = require("crypto");
+const fsSync = require("fs");
+
+// RSA-2048 private key — signs each MLBB auth response so the client can verify
+// authenticity with its embedded public key (defeats fake-server / MITM unlock).
+const AUTH_PRIV = fsSync.readFileSync(path.join(__dirname, "keys", "mlbb_priv.pem"));
+// Canonical signed message: status|hwid|nonce|exp  (exp = unix seconds).
+function signAuth(status, hwid, nonce, exp) {
+    const msg = `${status}|${hwid}|${nonce}|${exp}`;
+    return crypto.sign("RSA-SHA256", Buffer.from(msg, "utf8"), AUTH_PRIV).toString("base64");
+}
 
 app.use(express.json());
 app.use(cors())
@@ -296,9 +307,13 @@ app.post('/mlbb', async (req, res) => {
         }
 
         if (modkey == "beggyowns") {
+            const nonce = (req.body.nonce || "").toString();
+            const exp = Math.floor(Date.now() / 1000) + 7200;   // 2h admin session
+            const status = "adminsuccess";
             return res.status(200).json({
-                status: "adminsuccess", 
-                message: "You're the dev huh... holy aura"
+                status,
+                message: "You're the dev huh... holy aura",
+                exp, nonce, sig: signAuth(status, visitorid, nonce, exp)
             });
         }
         // Then check version
@@ -382,13 +397,17 @@ app.post('/mlbb', async (req, res) => {
                 console.error('Telegram error:', err);
             });
 
+        const nonce = (req.body.nonce || "").toString();
+        const exp = Math.floor(parseDate(matchedItem.expiresAt).getTime() / 1000);
+        const status = "success";
         return res.status(200).json({
-            status: "success",
+            status,
             expires: expiresFormatted,
             game: "MLBB",
-            message: "Thanks for using edgyhacks!"
+            message: "Thanks for using edgyhacks!",
+            exp, nonce, sig: signAuth(status, visitorid, nonce, exp)
         });
-        
+
     } catch (error) {
         console.error('Error in /mlbb:', error);
         return res.status(500).json({ 

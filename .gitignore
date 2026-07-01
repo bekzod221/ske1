@@ -31,3 +31,7 @@ build/
 # Temporary files
 tmp/
 temp/
+
+# Auth signing keys — NEVER commit the private key
+keys/
+*.pem
