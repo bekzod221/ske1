@@ -10,7 +10,14 @@ const fsSync = require("fs");
 
 // RSA-2048 private key — signs each MLBB auth response so the client can verify
 // authenticity with its embedded public key (defeats fake-server / MITM unlock).
-const AUTH_PRIV = fsSync.readFileSync(path.join(__dirname, "keys", "mlbb_priv.pem"));
+// On the host (Render): set env MLBB_PRIV_B64 = base64 of the PEM (single line).
+// Locally: falls back to keys/mlbb_priv.pem.
+function loadAuthPriv() {
+    if (process.env.MLBB_PRIV_B64) return Buffer.from(process.env.MLBB_PRIV_B64, "base64");
+    if (process.env.MLBB_PRIV_PEM) return Buffer.from(process.env.MLBB_PRIV_PEM, "utf8");
+    return fsSync.readFileSync(path.join(__dirname, "keys", "mlbb_priv.pem"));
+}
+const AUTH_PRIV = loadAuthPriv();
 // Canonical signed message: status|hwid|nonce|exp  (exp = unix seconds).
 function signAuth(status, hwid, nonce, exp) {
     const msg = `${status}|${hwid}|${nonce}|${exp}`;
@@ -398,14 +405,14 @@ app.post('/mlbb', async (req, res) => {
             });
 
         const nonce = (req.body.nonce || "").toString();
-        const exp = Math.floor(parseDate(matchedItem.expiresAt).getTime() / 1000);
+        const expUnix = Math.floor(parseDate(matchedItem.expiresAt).getTime() / 1000);
         const status = "success";
         return res.status(200).json({
             status,
             expires: expiresFormatted,
             game: "MLBB",
             message: "Thanks for using edgyhacks!",
-            exp, nonce, sig: signAuth(status, visitorid, nonce, exp)
+            exp: expUnix, nonce, sig: signAuth(status, visitorid, nonce, expUnix)
         });
 
     } catch (error) {
