@@ -35,3 +35,4 @@ temp/
 # Auth signing keys — NEVER commit the private key
 keys/
 *.pem
+MLBB_PRIV_B64.txt

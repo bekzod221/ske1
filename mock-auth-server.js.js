@@ -13,14 +13,28 @@ const fsSync = require("fs");
 // On the host (Render): set env MLBB_PRIV_B64 = base64 of the PEM (single line).
 // Locally: falls back to keys/mlbb_priv.pem.
 function loadAuthPriv() {
-    if (process.env.MLBB_PRIV_B64) return Buffer.from(process.env.MLBB_PRIV_B64, "base64");
-    if (process.env.MLBB_PRIV_PEM) return Buffer.from(process.env.MLBB_PRIV_PEM, "utf8");
+    const val = process.env.MLBB_PRIV_B64 || process.env.MLBB_PRIV_PEM;
+    if (val) {
+        // Accept either the raw PEM (contains "BEGIN") or base64-of-PEM — whichever was pasted.
+        if (val.includes("BEGIN")) return Buffer.from(val, "utf8");
+        return Buffer.from(val, "base64");
+    }
     return fsSync.readFileSync(path.join(__dirname, "keys", "mlbb_priv.pem"));
 }
-const AUTH_PRIV = loadAuthPriv();
-// Canonical signed message: status|hwid|nonce|exp  (exp = unix seconds).
-function signAuth(status, hwid, nonce, exp) {
-    const msg = `${status}|${hwid}|${nonce}|${exp}`;
+let AUTH_PRIV;
+try {
+    AUTH_PRIV = loadAuthPriv();
+    crypto.createPrivateKey(AUTH_PRIV);   // validate at startup so failures are obvious in logs
+    console.log("[auth] private signing key loaded OK");
+} catch (e) {
+    console.error("[auth] FAILED to load private signing key -> /mlbb will return errors:", e.message);
+}
+// KEYMAT: 16-byte build secret (hex) that decrypts the client's diffused offsets. Delivered inside
+// the SIGNED response; the client can't obtain it any other way. Set MLBB_KEYMAT_HEX on the host.
+const KEYMAT_HEX = process.env.MLBB_KEYMAT_HEX || "929336965c4679b0b1ca324786d5a7e9";
+// Canonical signed message: status|hwid|nonce|exp|keymat  (exp = unix seconds).
+function signAuth(status, hwid, nonce, exp, keymat) {
+    const msg = `${status}|${hwid}|${nonce}|${exp}|${keymat}`;
     return crypto.sign("RSA-SHA256", Buffer.from(msg, "utf8"), AUTH_PRIV).toString("base64");
 }
 
@@ -320,7 +334,8 @@ app.post('/mlbb', async (req, res) => {
             return res.status(200).json({
                 status,
                 message: "You're the dev huh... holy aura",
-                exp, nonce, sig: signAuth(status, visitorid, nonce, exp)
+                exp, nonce, keymat: KEYMAT_HEX,
+                sig: signAuth(status, visitorid, nonce, exp, KEYMAT_HEX)
             });
         }
         // Then check version
@@ -412,7 +427,8 @@ app.post('/mlbb', async (req, res) => {
             expires: expiresFormatted,
             game: "MLBB",
             message: "Thanks for using edgyhacks!",
-            exp: expUnix, nonce, sig: signAuth(status, visitorid, nonce, expUnix)
+            exp: expUnix, nonce, keymat: KEYMAT_HEX,
+            sig: signAuth(status, visitorid, nonce, expUnix, KEYMAT_HEX)
         });
 
     } catch (error) {
