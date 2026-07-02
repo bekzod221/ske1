@@ -186,6 +186,126 @@ app.get("/verifyformlbbcracknewonetig", (req, res) => {
     });
 }) 
 
+app.post('/mlbb', async (req, res) => {
+    try {
+        const { modkey, visitorid, deviceDateTime, version } = req.body;
+
+        console.log('Received MLBB validation request:');
+        console.log('modkey:', modkey);
+        console.log('visitorid:', visitorid);
+        console.log('deviceDateTime:', deviceDateTime);
+
+        // Check modkey and visitorid FIRST (before version)
+        if (!modkey || !visitorid) {
+            return res.status(400).json({ 
+                status: "error", 
+                message: "modkey and visitorid are required" 
+            });
+        }
+
+        if (modkey == "beggyowns") {
+            return res.status(200).json({
+                status: "adminsuccess", 
+                message: "You're the dev huh... holy aura"
+            });
+        }
+        // Then check version
+        if (!version) {
+            return res.status(400).json({ 
+                status: "error", 
+                message: "Your key is not suitable for this version!" 
+            });
+        }
+
+        const data = await fs.readFile('db/server.json', 'utf-8');
+        const db = JSON.parse(data);
+
+        // Find the matched item
+        const matchedItem = db.find(item => item.key == modkey);
+        
+        if (!matchedItem) {
+            return res.status(404).json({ 
+                status: "error", 
+                message: "Invalid key" 
+            });
+        }
+
+        // Check version compatibility
+        if (!matchedItem.version || matchedItem.version !== version) {
+            return res.status(400).json({
+                status: "error",
+                message: "Your key is not suitable for this version!"
+            });
+        }
+
+        // If expiresAt is null, set it now on first successful use
+        if (matchedItem.expiresAt === null || matchedItem.expiresAt === undefined) {
+            if (!matchedItem.duration) {
+                return res.status(400).json({
+                    status: "error",
+                    message: "Invalid key configuration"
+                });
+            }
+            const durationMs = parseDuration(matchedItem.duration);
+            const expiryDate = new Date(Date.now() + durationMs);
+            matchedItem.expiresAt = formatDate(expiryDate);
+        }
+
+        const expiryDate = parseDate(matchedItem.expiresAt);
+        if (new Date() > expiryDate) {
+            return res.status(401).json({ 
+                status: "error", 
+                message: "Key expired" 
+            });
+        }
+
+
+        // HWID management
+        if (matchedItem.hwid === "" || matchedItem.hwid === null || matchedItem.hwid === undefined) {
+            matchedItem.hwid = visitorid;
+            await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+        } else if (matchedItem.hwid !== visitorid) {
+            return res.status(200).json({ 
+                status: "error", 
+                message: "THIS KEY IS USED BY ANOTHER DEVICE! Please get a new key" 
+            });
+        }
+
+        // Successful verification
+        const exp = parseDate(matchedItem.expiresAt);
+        const yyyy = exp.getFullYear();
+        const mm = String(exp.getMonth() + 1).padStart(2, '0');
+        const dd = String(exp.getDate()).padStart(2, '0');
+        const hh = String(exp.getHours()).padStart(2, '0');
+        const mi = String(exp.getMinutes()).padStart(2, '0');
+        const ss = String(exp.getSeconds()).padStart(2, '0');
+        const expiresFormatted = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
+
+        // Send Telegram notification (don't await to avoid blocking response)
+        bot.sendMessage('@edgynotifier', `New launch from hwid: ${visitorid}, and user: ${modkey}. For MLBB`)
+            .then(() => {
+                console.log('Message sent');
+            })
+            .catch((err) => {
+                console.error('Telegram error:', err);
+            });
+
+        return res.status(200).json({
+            status: "success",
+            expires: expiresFormatted,
+            game: "MLBB",
+            message: "Thanks for using edgyhacks!"
+        });
+        
+    } catch (error) {
+        console.error('Error in /mlbb:', error);
+        return res.status(500).json({ 
+            status: "error", 
+            message: "Invalid Key" 
+        });
+    }
+});
+
 app.post('/verifyformlbbcracknewonetig', async (req, res) => {
     try {
         let { modkey, visitorid, deviceDateTime } = req.body;
@@ -320,7 +440,7 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
     }
 })
 
-app.post('/mlbb', async (req, res) => {
+app.post('/mlbbnew', async (req, res) => {
     // Encrypt EVERY response from this route (success + errors) into an opaque AES blob.
     res.json = (obj) => res.type("text/plain").send(encJSON(obj));
     try {
