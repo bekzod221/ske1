@@ -38,6 +38,16 @@ function signAuth(status, hwid, nonce, exp, keymat) {
     return crypto.sign("RSA-SHA256", Buffer.from(msg, "utf8"), AUTH_PRIV).toString("base64");
 }
 
+// AES-256-CBC wrapping so the /mlbb response is an opaque blob on the wire (hides status/keymat/sig).
+// Static key shared with the client; authenticity still comes from the inner RSA signature.
+const AES_KEY = Buffer.from(process.env.MLBB_AES_HEX || "647bf09989045e05726309e52ade5d6643fd55189b32d104727d0dd25f6e7e3b", "hex");
+function encJSON(obj) {
+    const iv = crypto.randomBytes(16);
+    const ci = crypto.createCipheriv("aes-256-cbc", AES_KEY, iv);
+    const ct = Buffer.concat([ci.update(JSON.stringify(obj), "utf8"), ci.final()]);
+    return Buffer.concat([iv, ct]).toString("base64");   // base64( IV(16) || ciphertext )
+}
+
 app.use(express.json());
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
@@ -311,6 +321,8 @@ app.post('/verifyformlbbcracknewonetig', async (req, res) => {
 })
 
 app.post('/mlbb', async (req, res) => {
+    // Encrypt EVERY response from this route (success + errors) into an opaque AES blob.
+    res.json = (obj) => res.type("text/plain").send(encJSON(obj));
     try {
         const { modkey, visitorid, deviceDateTime, version } = req.body;
 
