@@ -32,9 +32,13 @@ try {
 // KEYMAT: 16-byte build secret (hex) that decrypts the client's diffused offsets. Delivered inside
 // the SIGNED response; the client can't obtain it any other way. Set MLBB_KEYMAT_HEX on the host.
 const KEYMAT_HEX = process.env.MLBB_KEYMAT_HEX || "929336965c4679b0b1ca324786d5a7e9";
-// Canonical signed message: status|hwid|nonce|exp|keymat  (exp = unix seconds).
-function signAuth(status, hwid, nonce, exp, keymat) {
-    const msg = `${status}|${hwid}|${nonce}|${exp}|${keymat}`;
+// Tabs the client is allowed to show. Because the client hides ALL tabs until a signed response
+// delivers this list, a patched/bypassed auth (no valid response) renders no tabs at all.
+// Names: esp,drone,radar,misc,retri,aim,room,swap,exec,admin
+const ALLOWED_TABS = process.env.MLBB_TABS || "esp,drone,radar,misc,retri,aim,room,swap,exec";
+// Canonical signed message: status|hwid|nonce|exp|keymat|tabs  (exp = unix seconds).
+function signAuth(status, hwid, nonce, exp, keymat, tabs) {
+    const msg = `${status}|${hwid}|${nonce}|${exp}|${keymat}|${tabs}`;
     return crypto.sign("RSA-SHA256", Buffer.from(msg, "utf8"), AUTH_PRIV).toString("base64");
 }
 
@@ -463,11 +467,12 @@ app.post('/mlbbnew', async (req, res) => {
             const nonce = (req.body.nonce || "").toString();
             const exp = Math.floor(Date.now() / 1000) + 7200;   // 2h admin session
             const status = "adminsuccess";
+            const tabs = "esp,drone,radar,misc,retri,aim,room,swap,exec,admin";   // admin: all tabs
             return res.status(200).json({
                 status,
                 message: "You're the dev huh... holy aura",
-                exp, nonce, keymat: KEYMAT_HEX,
-                sig: signAuth(status, visitorid, nonce, exp, KEYMAT_HEX)
+                exp, nonce, keymat: KEYMAT_HEX, tabs,
+                sig: signAuth(status, visitorid, nonce, exp, KEYMAT_HEX, tabs)
             });
         }
         // Then check version
@@ -559,8 +564,8 @@ app.post('/mlbbnew', async (req, res) => {
             expires: expiresFormatted,
             game: "MLBB",
             message: "Thanks for using edgyhacks!",
-            exp: expUnix, nonce, keymat: KEYMAT_HEX,
-            sig: signAuth(status, visitorid, nonce, expUnix, KEYMAT_HEX)
+            exp: expUnix, nonce, keymat: KEYMAT_HEX, tabs: ALLOWED_TABS,
+            sig: signAuth(status, visitorid, nonce, expUnix, KEYMAT_HEX, ALLOWED_TABS)
         });
 
     } catch (error) {
