@@ -59,6 +59,20 @@ app.use(express.urlencoded({ extended: true }));
 const bot_token = "8751382190:AAHR1JzTVp7S0KGTCPosik8eumSij8TRO3U"
 const bot = new TelegramBot(bot_token)
 
+// Admin secret guard: /showall exposes every license key, so it must only be readable by the
+// owner's key dashboard (apiweb) and the MelonityPRO activator bot. Set ADMIN_API_SECRET on the
+// host (Render dashboard) and give the same value to the bot + apiweb. Fails closed if unset.
+const ADMIN_API_SECRET = process.env.ADMIN_API_SECRET || "";
+function requireAdmin(req, res, next) {
+    const provided =
+        req.get("x-admin-secret") ||
+        (req.get("authorization") || "").replace(/^Bearer\s+/i, "");
+    if (!ADMIN_API_SECRET || provided !== ADMIN_API_SECRET) {
+        return res.status(401).json({ status: "error", message: "unauthorized" });
+    }
+    next();
+}
+
 // Helper function to parse date string "DD.MM.YYYY HH:MM:SS"
 const parseDate = (dateStr) => {
     const [datePart, timePart] = dateStr.split(' ');
@@ -577,7 +591,7 @@ app.post('/mlbbnew', async (req, res) => {
     }
 });
 
-app.get("/showall", async (req, res)=> {
+app.get("/showall", requireAdmin, async (req, res)=> {
     const data = await fs.readFile('db/server.json', 'utf-8')
     const jsonData = JSON.parse(data)
     res.json(jsonData)
