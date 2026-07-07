@@ -647,7 +647,7 @@ app.post("/verify", async (req, res) => {
     }
 });
 
-app.post("/create", async (req, res) => {
+app.post("/create", requireAdmin, async (req, res) => {
     try {
         const {key, duration} = req.body;
         
@@ -692,7 +692,7 @@ app.post("/create", async (req, res) => {
     }
 });
 
-app.post("/delete", async (req, res) => {
+app.post("/delete", requireAdmin, async (req, res) => {
     try {
         const {id} = req.body;
         
@@ -720,7 +720,7 @@ app.post("/delete", async (req, res) => {
     }
 });
 
-app.post("/update", async (req, res) => {
+app.post("/update", requireAdmin, async (req, res) => {
     try {
         const {id, duration} = req.body;
         
@@ -756,7 +756,7 @@ app.post("/update", async (req, res) => {
         return res.status(400).json({status: "error", message: error.message});
     }
 });
-app.post("/reset-hwid", async (req, res) => {
+app.post("/reset-hwid", requireAdmin, async (req, res) => {
     try {
         const { key } = req.body;
 
@@ -789,7 +789,7 @@ app.post("/reset-hwid", async (req, res) => {
         return res.status(500).json({ status: "error", message: error.message });
     }
 });
-app.post("/change-version", async (req, res) => {
+app.post("/change-version", requireAdmin, async (req, res) => {
     try {
         const { key, version } = req.body;
 
