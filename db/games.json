@@ -4,7 +4,7 @@
     "bought": 452,
     "descp": "A modern cheat for PUBG with ESP, Aimbot, No Recoil, WallHack, and other features. Ideal for dominating in matches.",
     "features": "ANTIBAN, ESP, Aimbot, WallHack, SkinChanger, Grenade Indicator, 100% Accuracy",
-    "version": "4.3.0",
+    "version": "4.5.0",
     "review": 312,
     "hack_name": "Edgy Hack V3",
     "video": "auwp6rWVVho",
@@ -33,35 +33,35 @@
     }
   },
   {
-    "title": "Edgy Hack - COD MOBILE",
-    "bought": 23,
+    "title": "COD MOBILE",
+    "bought": 152,
     "descp": "A modern cheat for Call Of Duty with ESP, Aimbot, No Recoil, WallHack, and other features. Ideal for dominating in matches.",
-    "features": "ESP, Aimbot, WallHack, SkinChanger, SpeedHack",
-    "version": "1.0.52",
-    "review": 19,
+    "features": "ESP, Aimbot, WallHack, Reset Account, Silent Aim, Magic Bullet",
+    "version": "1.0.56",
+    "review": 83,
     "hack_name": "Edgy Hack V1",
     "video": "EB6cqJ_0ok0",
     "icon": "https://play-lh.googleusercontent.com/AtGuphTcfffarHBaw2mn4PHZh6SxSUjbZbSDuL0s_8apx--rXrtu3TNIs43O2_oZCQ",
-    "thumbnail": "https://i.ibb.co/sJgxJDx2/IMG-5399.jpg",
+    "thumbnail": "https://i.ibb.co/LHWwWM8/codm.png",
     "id": "3",
     "plans": {
       "weekly": {
         "price": 15,
         "duration": "7 days",
         "active": true,
-        "payhip": "https://www.patreon.com/posts/codm-weekly-pass-142283311"
+        "payhip": "https://edgystore.sell.app/product/product-1784729116"
       },
       "monthly": {
         "price": 25,
         "duration": "30 days",
         "active": true,
-        "payhip": "https://www.patreon.com/posts/codm-monthly-pass-142283312"
+        "payhip": "https://edgystore.sell.app/product/product-1784729117"
       },
       "lifetime": {
         "price": 50,
         "duration": "unlimited",
         "active": true,
-        "payhip": "https://www.patreon.com/posts/codm-lifetime-142283313"
+        "payhip": "https://edgystore.sell.app/product/product-1784729110"
       }
     }
   },
