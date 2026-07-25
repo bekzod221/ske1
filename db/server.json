@@ -2,7 +2,7 @@
     {
         "id": "1774745950383_42wjsuqqw",
         "key": "bekzod",
-        "hwid": "FED4E54F-2690-470C-91D1-FB4A6FFBFD08",
+        "hwid": "1C34F37C-B539-451A-A81B-E2C98A58E51C",
         "version": "1.0",
         "expiresAt": "29.03.2027 00:59:10"
     },
@@ -1275,10 +1275,10 @@
     {
         "id": "1781881256432_f2djugsh4",
         "key": "UW1O6S34",
-        "hwid": "",
+        "hwid": "EA3F8DF1-AD29-4FB5-8E59-DC07B8895234",
         "version": "1.0",
         "duration": "7d",
-        "expiresAt": null
+        "expiresAt": "29.07.2026 18:03:49"
     },
     {
         "id": "1781881256723_jq4l7hv8e",
@@ -1423,5 +1423,245 @@
         "version": "1.0",
         "duration": "24h",
         "expiresAt": "19.07.2026 01:20:54"
+    },
+    {
+        "id": "1784942976136_k61aogegy",
+        "key": "2W6CZ5PX",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942976918_roumstiux",
+        "key": "CJG1FF4B",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942977242_rq9p3ysbw",
+        "key": "GQD3Y68M",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942977594_bec42ag69",
+        "key": "FH2TUSGQ",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942978000_vwo953ua8",
+        "key": "J78X4WWL",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942978273_f7rugydsl",
+        "key": "3OTICKTR",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942978580_b4a1g7qdz",
+        "key": "01P4PND9",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942978933_v5v49d0s0",
+        "key": "33OESJOW",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942979197_d1mrfp2wa",
+        "key": "JMGRO050",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942979468_mssoeqn7n",
+        "key": "G9L580N5",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "7d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942981587_v7opy9zel",
+        "key": "RSR58RGT",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942981906_l68t6df2m",
+        "key": "0U4AXMQD",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942982168_nfffulgr8",
+        "key": "0O3FCTHI",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942982439_pxi7fs7hp",
+        "key": "EDQ523XB",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942982746_50zx7ty3a",
+        "key": "EI3444FY",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942983051_czyse8zte",
+        "key": "OO4KJ325",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942983433_e6npv6alk",
+        "key": "6KG6HDOX",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942983699_m91afdbpe",
+        "key": "4PE55BRL",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942983964_b2mo89b7b",
+        "key": "82MHW9BY",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942984236_bvkihtac4",
+        "key": "5TN6U7QA",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "30d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942984772_hxlxdu1j0",
+        "key": "KY362BYJ",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942985070_bgto4rq5t",
+        "key": "QFIXFJTR",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942985350_ump0mtuao",
+        "key": "15176TJQ",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942985616_es01tfkof",
+        "key": "NEOU3PIV",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942985889_0fnmtqjhj",
+        "key": "RQBTI4DH",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942986153_kmx3qo95k",
+        "key": "MFVG3F0Q",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942986425_r8i4hpznx",
+        "key": "AWK2KVZN",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942986697_ct4rgfjx1",
+        "key": "YMZMSJ7H",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942986995_revh7ltym",
+        "key": "5703FC43",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
+    },
+    {
+        "id": "1784942987264_qwfm7trre",
+        "key": "NPOAOPNP",
+        "hwid": "",
+        "version": "1.0",
+        "duration": "365d",
+        "expiresAt": null
     }
 ]
