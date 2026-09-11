@@ -877,6 +877,45 @@ app.post("/change-status", async (req, res) => {
         res.status(500).json({ error: "something went wrong" });
     }
 });
+// ===== PUBGM 4.6 pak (EDGYHACKS) VIP endpoints =====
+// The pak POSTs form-urlencoded { vip_key/key, uid/openid, ... } and parses the JSON body
+// for "status":true, "type":"VIP", "msg":"...", "mod_uids":"...". Keys live in the shared
+// db/server.json store (create with /create, duration e.g. "7d"); expiry is set on first use
+// and the key is then locked to that game UID. The route paths are matched by prefix regex so
+// the pak's URL string can carry padding (…_edgyhacks_pak46) to stay the donor's exact byte length.
+async function pakCheckVipKey(req, res) {
+    try {
+        const key = String(req.body.vip_key || req.body.key || "").trim();
+        const uid = String(req.body.uid || req.body.openid || req.body.S_UID || "").trim();
+        if (!key) return res.json({ status: false, type: "FREE", msg: "No key provided" });
+
+        const db = JSON.parse(await fs.readFile('db/server.json', 'utf-8'));
+        const item = db.find(i => i.key == key);
+        if (!item) return res.json({ status: false, type: "FREE", msg: "Invalid key - buy VIP at t.me/edgyhacks" });
+
+        // First successful use: stamp expiry from the key's duration.
+        if (!item.expiresAt) {
+            if (!item.duration) return res.json({ status: false, type: "FREE", msg: "Invalid key configuration" });
+            item.expiresAt = formatDate(new Date(Date.now() + parseDuration(item.duration)));
+        }
+        if (new Date() > parseDate(item.expiresAt)) return res.json({ status: false, type: "EXPIRED", msg: "Key expired - renew at t.me/edgyhacks" });
+
+        // Lock the key to the first game UID it activates on (stored in the hwid slot).
+        if (uid) {
+            if (!item.hwid) item.hwid = uid;
+            else if (item.hwid !== uid) return res.json({ status: false, type: "FREE", msg: "Key already locked to another account" });
+        }
+        await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
+        bot.sendMessage('@edgynotifier', `PUBG VIP check OK: key=${key} uid=${uid} exp=${item.expiresAt}`).catch(()=>{});
+        return res.json({ status: true, type: "VIP", msg: "EDGYHACKS VIP active", mod_uids: uid || "" });
+    } catch (e) {
+        return res.json({ status: false, type: "FREE", msg: "Server error" });
+    }
+}
+app.post(/^\/check_vip_key/, pakCheckVipKey);
+app.post(/^\/send_feedback/, (req, res) => res.json({ status: true, msg: "ok" }));
+app.post(/^\/match_radar/,  (req, res) => res.json({ status: true, alive_count: 0, new_deaths: 0, mod_uids: "" }));
+
 // Alternative: Use a middleware to normalize the path
 app.use((req, res, next) => {
     // Normalize multiple slashes to a single slash
