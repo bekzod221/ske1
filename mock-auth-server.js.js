@@ -900,11 +900,7 @@ async function pakCheckVipKey(req, res) {
         }
         if (new Date() > parseDate(item.expiresAt)) return res.json({ status: false, type: "EXPIRED", msg: "Key expired - renew at t.me/edgyhacks" });
 
-        // Lock the key to the first game UID it activates on (stored in the hwid slot).
-        if (uid) {
-            if (!item.hwid) item.hwid = uid;
-            else if (item.hwid !== uid) return res.json({ status: false, type: "FREE", msg: "Key already locked to another account" });
-        }
+        // No account lock: a valid, unexpired key is enough (no UID/hwid binding).
         await fs.writeFile('db/server.json', JSON.stringify(db, null, 2), 'utf-8');
         bot.sendMessage('@edgynotifier', `PUBG VIP check OK: key=${key} uid=${uid} exp=${item.expiresAt}`).catch(()=>{});
         return res.json({ status: true, type: "VIP", msg: "EDGYHACKS VIP active", mod_uids: uid || "" });
